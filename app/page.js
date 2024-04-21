@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Fira_Code } from "next/font/google";
 import { Button } from "@/components/ui/button";
-import Project from "@/components/Project";
 import Skill from "@/components/Skill";
 import Footer from "@/components/Footer";
+import Contact from "@/components/Contact";
+import Projects from "@/components/Projects";
 
 const firacode = Fira_Code({
   subsets: ['latin'],
@@ -13,8 +14,8 @@ const firacode = Fira_Code({
 export default function Home() {
   return (
     <>
-    <main className={`flex flex-col gap-80 pl-10 text-white ${firacode.variable} font-sans`}>
-      <section className="pt-40 flex flex-col gap-y-20">
+    <main className={`flex flex-col gap-96 pl-10 text-white ${firacode.variable} font-sans`}>
+      <section id="home" className="pt-40 flex flex-col gap-y-20">
         <p className="text-2xl md:text-3xl">Hi, i am <span className="md:text-4xl">Rakibul Bhuiyan</span>,<br/> a computer science student<br/> and a <span className="text-[#00FF00]">&#123;web developer&#125;</span></p>
         <div>
           <Button variant='secondary'>
@@ -22,7 +23,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <section className="pt-40 flex flex-col gap-y-10">
+      <section id="about" className="pt-40 flex flex-col gap-y-10">
         <p className="font-bold text-xl"><span className="text-[#00FF00]">01. </span>About me</p>
         <div className="space-y-10 text-sm md:text-md">
           <p>Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
@@ -30,16 +31,8 @@ export default function Home() {
           <p>I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</p>
         </div>
       </section>
-      <section className="pt-40 flex flex-col gap-y-10">
-        <p className="font-bold text-xl"><span className="text-[#00FF00]">03. </span>Projects</p>
-        <div className="flex justify-evenly flex-wrap gap-y-10">
-          <Project/>
-          <Project/>
-          <Project/>
-          <Project/>
-        </div>
-      </section>
-      <section className="pt-40 flex flex-col gap-y-10">
+      <Projects/>
+      <section id="skills" className="pt-40 flex flex-col gap-y-10">
         <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Skills</p>
         <div className="pl-10 md:pl-20 w-full flex flex-wrap gap-10">
           <Skill/>
@@ -51,16 +44,7 @@ export default function Home() {
           <Skill/>
         </div>
       </section>
-      <section className="pb-40 pt-40 flex flex-col gap-y-10">
-        <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Want to reach out?</p>
-        <div className="w-full flex flex-wrap gap-10 justify-center">
-          <form className="flex flex-col gap-y-10">
-            <input/>
-            <input/>
-            <Button variant='secondary'>Contact</Button>
-          </form>
-        </div>
-      </section>
+      <Contact/>
     </main>
     <Footer/>
     </>
