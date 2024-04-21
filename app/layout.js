@@ -5,9 +5,11 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
+import { Fira_Code } from "next/font/google";
 
-
-const inter = Inter({ subsets: ["latin"] });
+const firacode = Fira_Code({
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "Rakibul's Portfolio",
@@ -16,14 +18,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en">
+      <body className={firacode.className}>
         <ActiveSectionContextProvider>
           <Header/>
           {children}
           <Footer/>
         </ActiveSectionContextProvider>
-        </body>
+      </body>
     </html>
   );
 }

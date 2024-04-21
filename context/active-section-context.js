@@ -2,8 +2,7 @@
 
 import React, { useState, createContext, useContext } from "react";
 
-export const ActiveSectionContext =
-  createContext(null);
+export const ActiveSectionContext = createContext(null);
 
 export default function ActiveSectionContextProvider({
   children,
