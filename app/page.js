@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Fira_Code } from "next/font/google";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
