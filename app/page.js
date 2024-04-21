@@ -3,6 +3,7 @@ import { Fira_Code } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import Project from "@/components/Project";
 import Skill from "@/components/Skill";
+import Footer from "@/components/Footer";
 
 const firacode = Fira_Code({
   subsets: ['latin'],
@@ -11,6 +12,7 @@ const firacode = Fira_Code({
 
 export default function Home() {
   return (
+    <>
     <main className={`flex flex-col gap-80 pl-10 text-white ${firacode.variable} font-sans`}>
       <section className="pt-40 flex flex-col gap-y-20">
         <p className="text-2xl md:text-3xl">Hi, i am <span className="md:text-4xl">Rakibul Bhuiyan</span>,<br/> a computer science student<br/> and a <span className="text-[#00FF00]">&#123;web developer&#125;</span></p>
@@ -50,17 +52,17 @@ export default function Home() {
         </div>
       </section>
       <section className="pb-40 pt-40 flex flex-col gap-y-10">
-        <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Skills</p>
-        <div className="pl-10 md:pl-20 w-full flex flex-wrap gap-10">
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
+        <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Want to reach out?</p>
+        <div className="w-full flex flex-wrap gap-10 justify-center">
+          <form className="flex flex-col gap-y-10">
+            <input/>
+            <input/>
+            <Button variant='secondary'>Contact</Button>
+          </form>
         </div>
       </section>
     </main>
+    <Footer/>
+    </>
   );
 }
