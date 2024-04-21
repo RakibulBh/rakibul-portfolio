@@ -11,7 +11,7 @@ export default function Projects() {
     <motion.section
       id="projects"
       ref={ref}
-      className="pt-40 flex flex-col gap-y-10 -scroll-m-10"
+      className="h-screen flex flex-col gap-y-10 scroll-m-28"
       initial={{
         opacity: 0,
       }}

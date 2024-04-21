@@ -12,7 +12,7 @@ export default function HomePage() {
     <motion.section 
       id="home"
       ref={ref}
-      className="pt-40 flex flex-col gap-y-10 scroll-m-[100rem]"
+      className="h-screen w-full pt-40 flex flex-col gap-y-10 scroll-m-[100rem]"
       initial={{
         opacity: 0,
       }}

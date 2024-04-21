@@ -25,9 +25,9 @@ export default function Skills() {
         once: true,
       }} 
       id="skills" 
-      className="flex flex-col gap-y-10 scroll-m-48">
+      className="h-screen flex flex-col gap-y-10 scroll-m-28">
         <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Skills</p>
-        <div className="pl-10 md:pl-20 w-full flex flex-wrap gap-10">
+        <div className="md:pl-20 w-full flex flex-wrap gap-10">
           <Skill/>
           <Skill/>
           <Skill/>
