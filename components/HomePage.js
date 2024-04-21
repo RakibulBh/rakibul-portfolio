@@ -1,15 +1,18 @@
+"use client"
+
 import React from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { Button } from "./ui/button";
 
-export default function Home() {
+export default function HomePage() {
   const { ref } = useSectionInView("Home");
 
   return (
-    <motion.section id="home"
+    <motion.section 
+      id="home"
       ref={ref}
-      className="pt-40 flex flex-col gap-y-10 -scroll-my-20"
+      className="pt-40 flex flex-col gap-y-10 scroll-m-[100rem]"
       initial={{
         opacity: 0,
       }}

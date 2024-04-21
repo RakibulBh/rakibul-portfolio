@@ -23,7 +23,9 @@ export default function Skills() {
       }}
       viewport={{
         once: true,
-      }} id="skills" className="pt-40 flex flex-col gap-y-10">
+      }} 
+      id="skills" 
+      className="flex flex-col gap-y-10 scroll-m-48">
         <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Skills</p>
         <div className="pl-10 md:pl-20 w-full flex flex-wrap gap-10">
           <Skill/>

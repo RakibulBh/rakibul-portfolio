@@ -11,7 +11,7 @@ export default function About() {
     <motion.section 
       id="about"
       ref={ref}
-      className="pt-40 flex flex-col gap-y-10 -scroll-my-20"
+      className="pt-40 flex flex-col gap-y-10 scroll-mt-28"
       initial={{
         opacity: 0,
       }}
