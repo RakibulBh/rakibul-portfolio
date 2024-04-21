@@ -15,7 +15,7 @@ export default function Projects() {
     <motion.section
       id="projects"
       ref={ref}
-      className="min-h-screen flex flex-col gap-y-10 md:p-10 lg:scroll-m-28"
+      className="min-h-screen flex flex-col gap-y-10 md:p-10 scroll-m-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}

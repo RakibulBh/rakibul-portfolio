@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none bg-[#334155] bg-opacity-40 shadow-lg shadow-white/[0.07] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full border-black/40"
+        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none bg-[#1e293b] bg-opacity-90 shadow-lg sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full border-black/40"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -32,7 +32,7 @@ export default function Header() {
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-white",
                   {
-                    "text-[#1e293b]":
+                    "text-white":
                       activeSection === link.name,
                   }
                 )}
@@ -46,7 +46,7 @@ export default function Header() {
 
                 {link.name === activeSection && (
                   <motion.span
-                    className="bg-[#cbd5e1] rounded-full absolute inset-0 -z-10"
+                    className="bg-[#334155] rounded-full absolute inset-0 -z-10"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
