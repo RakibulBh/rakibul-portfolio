@@ -5,6 +5,7 @@ import { useSectionInView } from "@/lib/hooks";
 import React from 'react';
 import Project from "@/components/Project";
 import SectionTitle from "../SectionTitle";
+import Link from "next/link"
 
 
 export default function Projects() {
@@ -21,12 +22,15 @@ export default function Projects() {
       viewport={{ once: true }}
     >
       <SectionTitle title='Projects' number='3'/>
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex flex-wrap gap-10">
         <Project />
         <Project />
         <Project />
         <Project />
       </div>
+      <Link href={'/projects'}>
+          <h1 className="transition-colors duration-300 ease-in-out text-center text-[#00FF00] hover:text-white">View archive</h1>
+      </Link>
     </motion.section>
   );
 }
