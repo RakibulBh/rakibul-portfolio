@@ -9,6 +9,27 @@ body,
   background-color: #0f172a;
 }
 
+/* This styles the scrollbar track */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+/* This styles the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* This styles the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+/* This styles the scrollbar upon hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1e293b;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
