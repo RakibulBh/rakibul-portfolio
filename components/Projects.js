@@ -7,12 +7,11 @@ import { useSectionInView } from "@/lib/hooks";
 export default function Projects() {
   const { ref } = useSectionInView("Projects");
 
-
   return (
     <motion.section
       id="projects"
       ref={ref}
-      className="pt-40 flex flex-col gap-y-10"
+      className="pt-40 flex flex-col gap-y-10 -scroll-my-20"
       initial={{
         opacity: 0,
       }}

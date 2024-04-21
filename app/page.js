@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Fira_Code } from "next/font/google";
 import { Button } from "@/components/ui/button";
-import Skill from "@/components/Skill";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 const firacode = Fira_Code({
   subsets: ['latin'],
@@ -32,18 +32,7 @@ export default function Home() {
         </div>
       </section>
       <Projects/>
-      <section id="skills" className="pt-40 flex flex-col gap-y-10">
-        <p className="font-bold text-xl"><span className="text-[#00FF00]">04. </span>Skills</p>
-        <div className="pl-10 md:pl-20 w-full flex flex-wrap gap-10">
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-          <Skill/>
-        </div>
-      </section>
+      <Skills/>
       <Contact/>
     </main>
     <Footer/>
