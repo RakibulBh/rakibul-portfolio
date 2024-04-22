@@ -1,11 +1,17 @@
-import { FaBriefcase, FaMedal } from "react-icons/fa";
-import { FiBriefcase } from "react-icons/fi";
+
+import { FaCode } from "react-icons/fa";
+import { FaRegFolder } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+
+
 
 
 export default function Card({title, description, icon}) {
   return (
-    <div className='bg-[#1e293b] rounded-xl w-[13rem] h-40 p-5 flex flex-col items-center justify-between shadow-lg shadow-gray-800/[0.3]'>
-        <FaBriefcase className="text-white h-6 w-6" />
+    <div className='text-center bg-[#1e293b] rounded-xl w-[30rem] h-[10rem] md:w-[15rem] md:h-[12rem] p-5 flex flex-col items-center justify-between shadow-lg shadow-gray-800/[0.3]'>
+        {icon == 'Code' && <FaCode className="text-white h-6 w-6" />}
+        {icon == 'File' && <FaRegFolder className="text-white h-6 w-6" />}
+        {icon == 'LeetCode' && <SiLeetcode className="text-white h-6 w-6" />} 
         <h2 className="text-sm font-semibold">{title}</h2>
         <p className="text-sm text-gray-400">{description}</p>
     </div>

@@ -1,6 +1,6 @@
 import Contact from "@/components/Sections/Contact";
 import Projects from "@/components/Sections/Projects";
-import Skills from "@/components/Sections/Skills/Skills";
+import Skills from "@/components/Sections/Skills";
 import About from "@/components/Sections/About";
 import HomePage from "@/components/Sections/HomePage";
 

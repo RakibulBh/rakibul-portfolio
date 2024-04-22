@@ -2,46 +2,65 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useSectionInView } from "@/lib/hooks";
-import TextField from '@mui/material/TextField';
-import { FaBriefcase } from "react-icons/fa";
 import SectionTitle from "../SectionTitle";
-import { Button } from "../ui/button";
 
 export default function Contact() {
-  const { ref } = useSectionInView("Contact");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const[name, setName] = useState('');
-  const[email, setEmail] = useState('');
-  const[message, setMessage] = useState('');
+  const inputStyle = "w-full bg-transparent border-b-2 border-gray-300 text-white py-2 px-4 focus:outline-none focus:border-blue-500 transition duration-300";
+  const labelStyle = "block text-gray-300 text-sm font-bold mb-2";
+  const buttonStyle = "w-full bg-[#1e293b] text-white font-bold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline transition duration-300";
 
   return (
     <motion.section
       id="contact"
-      ref={ref}
-      className="h-screen w-full flex flex-col justify-center items-center p-4"
+      className="w-full h-screen flex flex-col justify-center items-center bg-[#0F172A]"
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      viewport={{ once: true }}
     >
-      <div className="w-full">
-        <SectionTitle title='Contact me' number={5}/>
-        <form className="mt-10 flex flex-col space-y-10">
-             <div className="flex flex-col gap-y-2">
-                <label className="text-md font-semibold">Name</label>
-                <input value={name} onChange={(e) => setName(e.target.value)} className="w-full rounded-md p-3 outline-none text-black" placeholder="Name"/>
-             </div>
-             <div className="flex flex-col gap-y-2">
-                <label className="text-md font-semibold">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} className=" w-full rounded-md p-3 outline-none text-black" name="email" placeholder="Email" type="email"/>
-             </div>
-             <div className="flex flex-col gap-y-2">
-                <label className="flex flex-col gap-y-2">Message</label>
-                <textarea value={message} onChange={(e) => setMessage(e.target.value)} className="text-black p-4 w-full outline-none rounded-md" rows="10" name="message" placeholder="Enter your message here"/>
-             </div>
-             <Button variant='secondary'>Send Message</Button>
-          </form>
+      <div className="w-full max-w-2xl mx-auto">
+        <SectionTitle title="Contact me" number={5} />
+        <form className="mt-10 space-y-6" action="#" method="POST">
+          <div>
+            <label htmlFor="name" className={labelStyle}>Name</label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              className={inputStyle}
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className={labelStyle}>Email</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your email"
+              className={inputStyle}
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className={labelStyle}>Message</label>
+            <textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Enter your message here"
+              rows="4"
+              className={`${inputStyle} resize-none outline-none`}
+            />
+          </div>
+          <button type="submit" className={buttonStyle}>
+            Send Message
+          </button>
+        </form>
       </div>
     </motion.section>
   );

@@ -6,16 +6,21 @@ import { useSectionInView } from "@/lib/hooks";
 import SectionTitle from "../SectionTitle";
 import Image from "next/image"
 
+import { aboutData } from "@/lib/data";
+import { aboutCardData } from "@/lib/data";
+
 import Card from "@/components/Card";
 
 export default function About() {
   const { ref } = useSectionInView("About");
 
+
+
   return (
     <motion.section 
       id="about"
       ref={ref}
-      className="h-screen w-full scroll-m-32"
+      className="min-h-screen w-full scroll-m-24"
       initial={{
         opacity: 0,
       }}
@@ -29,13 +34,16 @@ export default function About() {
         once: true,
       }}>
         <SectionTitle title='About me' number='2'/>
-        <div className="w-full mt-10 flex flex-col md:flex-row md:justify-around justify-start space-y-10 md:space-y-0">
-          <Card title="Experience" description="8+ years"/>
-          <Card title="Experience" description="8+ years"/>
-          <Card title="Experience" description="8+ years"/>
+        <div className="gap-x-5 w-full mt-10 flex flex-col items-center md:flex-row md:justify-evenly justify-start space-y-10 md:space-y-0">
+          {aboutCardData.map((card) => (
+            <Card icon={card.icon} title={card.title} description={card.descirption}/>
+          ))}
         </div>
-        <p className="w-full mt-10 text-center text-gray-400 break-words">
-          I have been coding since the age of 11, from developing Roblox games to developign android apps, python automations and full stack web applications. I am currently developing all my developer skills, learning new things everyday.
+        <p className="w-full mt-10 text-gray-400 break-words">
+          {aboutData[0].text1}
+        </p>
+        <p className="w-full mt-10 text-gray-400 break-words">
+          {aboutData[0].text2}
         </p>
     </motion.section>
   )

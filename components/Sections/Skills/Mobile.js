@@ -25,7 +25,7 @@ const itemVariants = {
   }
 };
 
-export default function Web() {
+export default function Mobile() {
   return (
     <motion.div
       className='w-full flex flex-wrap justify-center gap-5 px-10 md:px-36'
@@ -33,7 +33,7 @@ export default function Web() {
       initial="hidden"
       animate="visible"
     >
-      {skillsData.web.map((skill, index) => (
+      {skillsData.mobile.map((skill, index) => (
         <motion.div key={skill} variants={itemVariants}>
           <Skill skill={skill} />
         </motion.div>

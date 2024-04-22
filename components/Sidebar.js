@@ -8,7 +8,9 @@ export default function Sidebar() {
   return (
     <div className='h-screen flex flex-col justify-between'>
       <div>
-        <p className="hidden md:block text-5xl text-white">R</p>
+        <Link href='/#home'>
+          <p className="hidden md:block text-5xl text-white">R</p>
+        </Link>
       </div>
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-y-10 mb-10">

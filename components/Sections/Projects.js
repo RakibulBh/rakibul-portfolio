@@ -7,6 +7,7 @@ import Project from "@/components/Project";
 import SectionTitle from "../SectionTitle";
 import Link from "next/link"
 
+import { projectsData } from "@/lib/data";
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects");
@@ -15,18 +16,17 @@ export default function Projects() {
     <motion.section
       id="projects"
       ref={ref}
-      className="min-h-screen flex flex-col gap-y-10 md:p-10 scroll-m-20"
+      className="mt-32 min-h-screen w-full flex flex-col gap-y-10 scroll-m-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <SectionTitle title='Projects' number='3'/>
-      <div className="flex flex-wrap gap-10">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+      <div className="flex items-center justify-around flex-wrap gap-y-10 gap-x-5">
+        {projectsData.map((project)=> (
+          <Project title={project.title} description={project.description} skills={project.tags} githubUrl={project.githubUrl} />
+        ))}
       </div>
       <Link href={'/projects'}>
           <h1 className="transition-colors duration-300 ease-in-out text-center text-[#00FF00] hover:text-white">View archive</h1>
