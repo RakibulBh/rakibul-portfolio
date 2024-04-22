@@ -25,7 +25,7 @@ export default function Projects() {
       <SectionTitle title='Projects' number='3'/>
       <div className="flex items-center justify-around flex-wrap gap-y-10 gap-x-5">
         {projectsData.map((project)=> (
-          <Project title={project.title} description={project.description} skills={project.tags} githubUrl={project.githubUrl} />
+          <Project key={project.githubUrl} title={project.title} description={project.description} skills={project.tags} githubUrl={project.githubUrl} />
         ))}
       </div>
       <Link href={'/projects'}>

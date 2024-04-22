@@ -36,7 +36,7 @@ export default function About() {
         <SectionTitle title='About me' number='2'/>
         <div className="gap-x-5 w-full mt-10 flex flex-col items-center md:flex-row md:justify-evenly justify-start space-y-10 md:space-y-0">
           {aboutCardData.map((card) => (
-            <Card icon={card.icon} title={card.title} description={card.descirption}/>
+            <Card key={card.title} icon={card.icon} title={card.title} description={card.descirption}/>
           ))}
         </div>
         <p className="w-full mt-10 text-gray-400 break-words">

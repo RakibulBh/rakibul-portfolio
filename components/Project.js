@@ -27,7 +27,7 @@ const Project = ({title, githubUrl, description, skills}) => {
       </div>
       <div className='flex flex-wrap text-center justify-evenly'>
         {skills.map((skill) => (
-          <span className={skillsClass}>{skill}</span>
+          <span key={skill} className={skillsClass}>{skill}</span>
         ))}
       </div>
     </div>
