@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <div className='h-screen flex flex-col justify-between'>
+    <div className='h-full flex flex-col justify-between'>
       <div>
         <Link href='/#home'>
           <p className="hidden md:block text-5xl text-white">R</p>
