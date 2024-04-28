@@ -13,6 +13,8 @@ export default function Contact() {
   const warning = () => toast.warning("Please fill all fields.");
   const error = () => toast.error("Error sending email.");
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -21,8 +23,10 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
+      setIsLoading(false);
       warning();
       return;
     }
@@ -37,9 +41,11 @@ export default function Contact() {
           setEmail("");
           setMessage("");
           setName("");
+          setIsLoading(false);
         },
         (error) => {
           error();
+          setIsLoading(false);
         }
       );
   };
@@ -47,8 +53,9 @@ export default function Contact() {
   const inputStyle =
     "w-full bg-transparent border-b-2 border-[#334155] text-white py-2 px-4 focus:outline-none focus:border-white transition duration-300";
   const labelStyle = "block text-gray-300 text-sm font-bold mb-2";
-  const buttonStyle =
-    "w-full bg-[#1e293b] text-white font-bold py-2 px-4 rounded hover:bg-[#334155] focus:outline-none focus:shadow-outline transition duration-300";
+  const buttonStyle = `w-full ${
+    isLoading ? "bg-[#334155]" : "bg-[#1e293b]"
+  } text-white font-bold py-2 px-4 rounded hover:bg-[#334155] focus:outline-none focus:shadow-outline transition duration-300`;
 
   return (
     <motion.section
@@ -115,8 +122,8 @@ export default function Contact() {
               className={`${inputStyle} resize-none outline-none`}
             />
           </div>
-          <button type="submit" className={buttonStyle}>
-            Send Message
+          <button disabled={isLoading} type="submit" className={buttonStyle}>
+            {isLoading ? "Sending..." : "Send"}
           </button>
         </form>
       </div>
