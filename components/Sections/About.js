@@ -39,7 +39,6 @@ export default function About() {
             <Card key={card.title} icon={card.icon} title={card.title} description={card.descirption}/>
           ))}
         </div>
-        <p className="text-center">Yet to do...</p>
     </motion.section>
   )
 }
