@@ -7,7 +7,7 @@ export default function Achive() {
   return (
     <>
       <div className='h-full w-full text-white gap-y-10 flex flex-col items-center justify-center'>
-        <p className=' text-white text-3xl text-left'>All projects.</p>
+        <p className='hidden lg:block text-white text-3xl text-left'>All projects.</p>
         <table className="text-sm">
           <thead className='text-gray-500 py-10'>
             <tr className="">
