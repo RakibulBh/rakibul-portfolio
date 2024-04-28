@@ -1,52 +1,54 @@
 "use client";
 
-
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 
 export default function Contact() {
+  const success = () => toast.success("Email sent!");
+  const warning = () => toast.warning("Please fill all fields.");
+  const error = () => toast.error("Error sending email.");
 
-  const success = () => toast.success("Email sent!")
-  const error = () => toast.error("Error sending email.")
-  
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (name.trim() == '' || email.trim() == '' || message.trim() == '' ) {
-      return
-    };
+    if (name.trim() == "" || email.trim() == "" || message.trim() == "") {
+      warning();
+      return;
+    }
 
     emailjs
-      .sendForm('service_gnn950g', 'template_0pxzc0n', form.current, {
-        publicKey: '27QLv3NaCTySTqG-c',
+      .sendForm("service_gnn950g", "template_0pxzc0n", form.current, {
+        publicKey: "27QLv3NaCTySTqG-c",
       })
       .then(
         () => {
           success();
-          setEmail('');
-          setMessage('')
-          setName('')
+          setEmail("");
+          setMessage("");
+          setName("");
         },
         (error) => {
           error();
-        },
+        }
       );
   };
 
-  const inputStyle = "w-full bg-transparent border-b-2 border-[#334155] text-white py-2 px-4 focus:outline-none focus:border-white transition duration-300";
+  const inputStyle =
+    "w-full bg-transparent border-b-2 border-[#334155] text-white py-2 px-4 focus:outline-none focus:border-white transition duration-300";
   const labelStyle = "block text-gray-300 text-sm font-bold mb-2";
-  const buttonStyle = "w-full bg-[#1e293b] text-white font-bold py-2 px-4 rounded hover:bg-[#334155] focus:outline-none focus:shadow-outline transition duration-300";
+  const buttonStyle =
+    "w-full bg-[#1e293b] text-white font-bold py-2 px-4 rounded hover:bg-[#334155] focus:outline-none focus:shadow-outline transition duration-300";
 
   return (
     <motion.section
@@ -54,26 +56,29 @@ export default function Contact() {
       className="w-full h-screen flex flex-col justify-center items-center bg-[#0F172A]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}>
+      transition={{ duration: 1 }}
+    >
       <ToastContainer
-      position="bottom-right"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss={false}
-      draggable={false}
-      pauseOnHover={false}
-      theme="dark"
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="dark"
       />
       <div className="w-full max-w-2xl mx-auto">
         <SectionTitle title="Contact me" number={5} />
-        <form ref={form} onSubmit={sendEmail} className="mt-10 space-y-6" >
+        <form ref={form} onSubmit={sendEmail} className="mt-10 space-y-6">
           <div>
-            <label htmlFor="user_name" className={labelStyle}>Name</label>
+            <label htmlFor="user_name" className={labelStyle}>
+              Name
+            </label>
             <input
-              name='user_name'
+              name="user_name"
               type="text"
               id="name"
               value={name}
@@ -83,9 +88,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="user_email" className={labelStyle}>Email</label>
+            <label htmlFor="user_email" className={labelStyle}>
+              Email
+            </label>
             <input
-              name='user_email'
+              name="user_email"
               type="email"
               id="email"
               value={email}
@@ -95,9 +102,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="user_message" className={labelStyle}>Message</label>
+            <label htmlFor="user_message" className={labelStyle}>
+              Message
+            </label>
             <textarea
-              name='user_message'
+              name="user_message"
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
