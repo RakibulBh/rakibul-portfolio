@@ -8,11 +8,11 @@ const skillsClass = 'text-xs md:text-sm text-gray-300'
 
 const Project = ({title, githubUrl, description, skills}) => {
   return (
-    <div className='group justify-between gap-y-4 w-[30rem] h-[20rem] lg:w-[25rem] lg:h-[25rem] bg-[#112240] rounded-tr-xl p-6 flex flex-col hover:cursor-pointer transition-colors duration-300'>
+    <div className='group justify-between gap-y-4 w-[30rem] h-[20rem] md:w-[25rem] mg:h-[25rem] bg-[#112240] rounded-tr-xl p-6 flex flex-col hover:cursor-pointer transition-colors duration-300'>
       <div className='flex justify-between items-center'>
         <FaRegFolder className='w-8 h-8' />
         <Link href={githubUrl}>
-          <div className='flex gap-x-2 items-center hover:text-[#00FF00] text-sm lg:text-base text-white transition-colors duration-300 ease-in-out'>
+          <div className='flex gap-x-2 items-center hover:text-[#00FF00] text-sm md:text-base text-white transition-colors duration-300 ease-in-out'>
             <p>
               GitHub
             </p>
