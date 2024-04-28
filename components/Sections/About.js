@@ -20,7 +20,7 @@ export default function About() {
     <motion.section 
       id="about"
       ref={ref}
-      className="min-h-screen w-full scroll-m-24"
+      className="min-h-screen w-full scroll-m-24 flex flex-col "
       initial={{
         opacity: 0,
       }}
@@ -39,12 +39,7 @@ export default function About() {
             <Card key={card.title} icon={card.icon} title={card.title} description={card.descirption}/>
           ))}
         </div>
-        <p className="w-full mt-10 text-gray-400 break-words">
-          {aboutData[0].text1}
-        </p>
-        <p className="w-full mt-10 text-gray-400 break-words">
-          {aboutData[0].text2}
-        </p>
+        <p className="text-center">Yet to do...</p>
     </motion.section>
   )
 }
