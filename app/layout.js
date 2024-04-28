@@ -9,26 +9,28 @@ import { Fira_Code } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
 
 const firacode = Fira_Code({
-  subsets: ['latin'],
-})
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Rakibul's Portfolio",
-  description: "Developer portfolio of Rakibul Bhuiyan, check out these amazing projects!",
+  description:
+    "Developer portfolio of Rakibul Bhuiyan, check out these amazing projects!",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${firacode.className} flex h-full pr-0 md:pr-10`}>
-        <div className="hidden md:flex p-10 items-center  flex-col justfy-center">
-          <Sidebar/>
+      <body className={`${firacode.className} flex h-full pl-0 pr-0 md:pr-10`}>
+        <div className="hidden md:flex md:p-10 items-center flex-col justfy-center">
+          <Sidebar />
         </div>
-x        <div className="h-full w-full">
+        x{" "}
+        <div className="h-full w-full">
           <ActiveSectionContextProvider>
-            <Header/>
+            <Header />
             {children}
-            <Footer/>
+            <Footer />
           </ActiveSectionContextProvider>
         </div>
       </body>
