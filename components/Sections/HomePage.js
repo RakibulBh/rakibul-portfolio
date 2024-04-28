@@ -12,14 +12,13 @@ export default function HomePage() {
 
   const typeWriterProps = {
     words: ['Undergraduate student', 'Frontend dev', 'Backend dev', 'Fullstack dev'],
-
   }
 
   return (
     <motion.section 
       id="home"
       ref={ref}
-      className="h-screen w-full pt-40 flex flex-col gap-y-10 scroll-m-[100rem]"
+      className="h-screen w-full mx-auto flex flex-col gap-y-6 scroll-m-[100rem] justify-center text-left"
       initial={{
         opacity: 0,
       }}
@@ -32,8 +31,12 @@ export default function HomePage() {
       viewport={{
         once: true,
       }}>
-        <p className="text-2xl md:text-3xl">Hi, i am <span className="md:text-4xl">Rakibul Bhuiyan</span>,</p>
-        <p className="text-2xl md:text-3xl mt-1">I am a <span className="text-4xl text-[#00FF00]">&#123;<Typewriter cursorBlinking={true} cursor cursorStyle='_' loop={0} words={typeWriterProps.words}/>&#125;</span></p>
+        <div className="space-y-2">
+          <p className="text-[#00FF00] text-md text-left">Hi, my name is</p>
+          <p className="font-bold text-gray-300 text-5xl md:text-7xl">Rakibul Bhuiyan.</p>
+          <p className="text-3xl md:text-4xl mt-1">I am a <span className="text-4xl text-[#00FF00]">&#123;<Typewriter cursorBlinking={true} cursor cursorStyle='_' loop={0} words={typeWriterProps.words}/>&#125;</span></p>
+        </div>
+        <p className="text-gray-500">I’m an 18 year old student in the process of building multipl full-stack web apps, currently learning machine learning and AI.</p>
         <div className="group">
           <a href="/Rakibul Bhuiyan fullstack CV.pdf" download={'Rakibul Bhuiyan fullstack CV.pdf'}>
             <Button className="border border-[#00FF00] p-7">

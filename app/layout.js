@@ -19,17 +19,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <body className={`${firacode.className} flex`}>
-        <div className="fixed ml-5 mt-5 h-screen">
+    <html lang="en" className="h-full">
+      <body className={`${firacode.className} flex h-full pr-0 md:pr-10`}>
+        <div className="hidden md:flex p-10 items-center  flex-col justfy-center">
           <Sidebar/>
         </div>
-        <div>
+x        <div className="h-full w-full">
           <ActiveSectionContextProvider>
             <Header/>
             {children}
             <Footer/>
-        </ActiveSectionContextProvider>
+          </ActiveSectionContextProvider>
         </div>
       </body>
     </html>
