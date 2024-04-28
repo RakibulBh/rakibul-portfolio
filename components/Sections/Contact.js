@@ -37,7 +37,7 @@ export default function Contact() {
       );
   };
 
-  const inputStyle = "w-full bg-transparent border-b-2 border-gray-300 text-white py-2 px-4 focus:outline-none focus:border-[#334155] transition duration-300";
+  const inputStyle = "w-full bg-transparent border-b-2 border-[#334155] text-white py-2 px-4 focus:outline-none focus:border-white transition duration-300";
   const labelStyle = "block text-gray-300 text-sm font-bold mb-2";
   const buttonStyle = "w-full bg-[#1e293b] text-white font-bold py-2 px-4 rounded hover:bg-[#334155] focus:outline-none focus:shadow-outline transition duration-300";
 
