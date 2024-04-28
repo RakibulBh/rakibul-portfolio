@@ -1,18 +1,22 @@
 "use client";
 
+
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 
 export default function Contact() {
+
+  const success = () => toast.success("Email sent!")
+  const error = () => toast.error("Error sending email.")
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
 
   const form = useRef();
 
@@ -29,10 +33,13 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          success();
+          setEmail('');
+          setMessage('')
+          setName('')
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          error();
         },
       );
   };
@@ -47,8 +54,19 @@ export default function Contact() {
       className="w-full h-screen flex flex-col justify-center items-center bg-[#0F172A]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+      transition={{ duration: 1 }}>
+      <ToastContainer
+      position="bottom-right"
+      autoClose={3000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss={false}
+      draggable={false}
+      pauseOnHover={false}
+      theme="dark"
+      />
       <div className="w-full max-w-2xl mx-auto">
         <SectionTitle title="Contact me" number={5} />
         <form ref={form} onSubmit={sendEmail} className="mt-10 space-y-6" >

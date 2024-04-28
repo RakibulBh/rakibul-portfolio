@@ -24,7 +24,7 @@ export default function Achive() {
                 <td className="rounded-l-lg pl-[2rem] p-[10px] text-left py-5 text-green-500 whitespace-normal break-words">{project.date}</td>
                 <td className="p-[1rem] text-left py-5 font-extrabold">{project.title}</td>
                 <td className="p-[1rem] text-left py-5 font-extrabold">{project.madeAt ? project.madeAt : "-" }</td>
-                <td className="flex flex-wrap items-center p-[1rem] text-left py-5 font-gray-500 text-xs whitespace-normal break-words">
+                <td className="text-gray-500 flex flex-wrap items-center p-[1rem] text-left py-5 font-gray-500 text-xs whitespace-normal break-words">
                   {project.technologies.map((technology, i) => (
                     <span key={i}>{technology}{''}{i !== project.technologies.length - 1 && <span className="font-extrabold mx-[5px]">&middot;</span>}</span>
                   ))}
