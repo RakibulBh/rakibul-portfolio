@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Skill({skill}) {
   return (
-    <div className='flex w-320 h-10 bg-[#334155] rounded-md items-center justify-center p-4'>
+    <span className='text-xs md:text-sm text-white bg-[#334155] px-2 py-1 rounded-md mx-1 mb-1'>
       {skill}
-    </div>
+    </span>
   )
 }

@@ -15,7 +15,7 @@ export default function About() {
       <motion.section
         id="about"
         ref={ref}
-        className="min-h-screen w-full flex flex-col gap-y-12"
+        className="min-h-screen w-full flex flex-col gap-y-12 scroll-m-28"
         initial={{
           opacity: 0,
         }}

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaRegFolder } from "react-icons/fa";
 import Link from "next/link"
 import { AiOutlineExport } from "react-icons/ai";
+import Skill from './Sections/Skills/Skill';
 
 
 const skillsClass = 'text-xs md:text-sm text-gray-300'
@@ -10,7 +11,7 @@ const Project = ({ title, githubUrl, description, skills, productionUrl }) => {
   return (
     <div className='justify-between gap-y-4 w-full md:w-[30rem] h-[20rem] md:h-[25rem] bg-[#112240] rounded-tr-xl p-6 flex flex-col'>
       <div className='flex justify-between items-center'>
-        <FaRegFolder className='w-8 h-8' />
+        <FaRegFolder className='text-green-500 w-8 h-8' />
         <Link href={githubUrl}>
           <div className='flex gap-x-2 items-center hover:text-green-500 text-sm md:text-base text-white transition-colors duration-300 ease-in-out'>
             <p>
@@ -28,7 +29,7 @@ const Project = ({ title, githubUrl, description, skills, productionUrl }) => {
       </div>
       <div className='flex flex-wrap justify-center'>
         {skills.map((skill, index) => (
-          <span key={index} className='text-xs md:text-sm text-white bg-[#334155] px-2 py-1 rounded-md mx-1 mb-1'>{skill}</span>
+          <Skill color='green-500' key={index} skill={skill}/>
         ))}
       </div>
     </div>

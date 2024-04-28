@@ -10,11 +10,11 @@ export default function Achive() {
         <p className='hidden lg:block text-white text-3xl text-left'>All projects.</p>
         <table className="text-sm">
           <thead className='text-gray-500 py-10'>
-            <tr className="">
+            <tr className="text-left">
               <th className="pl-[2rem] p-[1rem]">Date</th>
               <th className="">Title</th>
               <th className="">Where</th>
-              <th className="">Tech</th>
+              <th className="text-center">Tech</th>
               <th className="pr-[2rem] p-[1rem]">Link</th>
             </tr>
           </thead>
@@ -31,17 +31,17 @@ export default function Achive() {
                 </td>
                 <td className="rounded-r-lg pr-[2rem] p-[1rem]">
                   <div className="flex gap-x-2">
-                    <Link href={project.githubUrl}>
+                    <Link className="hover:text-green-500 transition-colors duration-300 ease-in-out" href={project.githubUrl}>
                       <AiOutlineExport />
                     </Link>
-                    {project.productionUrl && <Link href={project.productionUrl}><IoMdBrowsers /></Link>}
+                    {project.productionUrl && <Link className="hover:text-green-500 transition-colors duration-300 ease-in-out" href={project.productionUrl}><IoMdBrowsers /></Link>}
                   </div>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <Link className="text-sm text-green-500 underline underline-offset-8  text-center hover:text-white" href='/'>
+        <Link className="text-sm text-white underline underline-offset-8  text-center hover:text-green-500 transition-colors duration-300 ease-in-out" href='/'>
           Back to the home page
         </Link>
       </div>

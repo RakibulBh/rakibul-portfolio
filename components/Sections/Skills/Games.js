@@ -35,7 +35,7 @@ export default function Games() {
     >
       {skillsData.games.map((skill, index) => (
         <motion.div key={skill} variants={itemVariants}>
-          <Skill skill={skill} />
+          <Skill key={index} skill={skill}/>
         </motion.div>
       ))}
     </motion.div>
