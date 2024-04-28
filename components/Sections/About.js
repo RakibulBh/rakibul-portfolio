@@ -34,12 +34,15 @@ export default function About() {
           <div className="flex flex-col gap-y-10">
             <h1 className="font-extrabold text-gray-400">Biography</h1>
             {aboutDataText.map((text, index) => (
-              <p className="text-gray-500 text-md break-words">{text}</p>
+              <p key={index} className="text-gray-500 text-md break-words">
+                {text}
+              </p>
             ))}
           </div>
           <div className="hidden md:flex flex-col gap-y-10 justify-center">
             {aboutCardData.map((card, index) => (
               <Card
+                key={index}
                 icon={card.icon}
                 title={card.title}
                 description={card.description}
