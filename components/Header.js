@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -18,9 +18,8 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
-
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-[#e2e8f0] sm:w-[initial] sm:flex-nowrap sm:gap-5">
+        <ul className="flex flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-[#e2e8f0] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
@@ -30,10 +29,9 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-white",
+                  "flex items-center justify-center px-3 py-3 hover:text-white",
                   {
-                    "text-white":
-                      activeSection === link.name,
+                    "text-white": activeSection === link.name,
                   }
                 )}
                 href={link.hash}
@@ -42,8 +40,12 @@ export default function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
+                <span className="inline text-green-500">
+                  {links.indexOf(link) + 1 < 10
+                    ? `0${links.indexOf(link) + 1}.`
+                    : `${links.indexOf(link) + 1}.`}
+                </span>
                 {link.name}
-
                 {link.name === activeSection && (
                   <motion.span
                     className="bg-[#334155] rounded-full absolute inset-0 -z-10"

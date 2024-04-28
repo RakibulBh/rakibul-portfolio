@@ -32,15 +32,15 @@ export default function HomePage() {
         once: true,
       }}>
         <div className="space-y-2">
-          <p className="text-[#00FF00] text-md text-left">Hi, my name is</p>
+          <p className="text-green-500 text-md text-left">Hi, my name is</p>
           <p className="font-bold text-gray-300 text-5xl md:text-7xl">Rakibul Bhuiyan.</p>
-          <p className="text-3xl md:text-4xl mt-1">I am a <span className="text-4xl text-[#00FF00]">&#123;<Typewriter cursorBlinking={true} cursor cursorStyle='_' loop={0} words={typeWriterProps.words}/>&#125;</span></p>
+          <p className="text-3xl md:text-4xl mt-1">I am a <span className="text-4xl text-green-500">&#123;<Typewriter cursorBlinking={true} cursor cursorStyle='_' loop={0} words={typeWriterProps.words}/>&#125;</span></p>
         </div>
         <p className="text-gray-500">I’m an 18 year old student in the process of building multipl full-stack web apps, currently learning machine learning and AI.</p>
         <div className="group">
           <a href="/Rakibul Bhuiyan fullstack CV.pdf" download={'Rakibul Bhuiyan fullstack CV.pdf'}>
-            <Button className="border border-[#00FF00] p-7">
-              Download Resume<span className="ml-3 group-hover:text-[#00FF00] transition-colors duration-300 ease-in-out"><IoNewspaperOutline className="w-5 h-5" /></span> 
+            <Button className="border border-green-500 p-7">
+              Download Resume<span className="ml-3 group-hover:text-green-500 transition-colors duration-300 ease-in-out"><IoNewspaperOutline className="w-5 h-5" /></span> 
             </Button>
           </a>
         </div>

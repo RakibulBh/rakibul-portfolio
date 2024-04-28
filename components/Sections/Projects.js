@@ -25,11 +25,11 @@ export default function Projects() {
       <SectionTitle title='Projects' number='3'/>
       <div className="flex items-center justify-around flex-wrap gap-y-10 gap-x-5">
         {projectsData.map((project)=> (
-          <Project key={project.githubUrl} title={project.title} description={project.description} skills={project.tags} githubUrl={project.githubUrl} />
+          <Project key={project.githubUrl} productionUrl={project.productionUrl} title={project.title} description={project.description} skills={project.tags} githubUrl={project.githubUrl} />
         ))}
       </div>
       <Link href={'/projects'}>
-          <h1 className="transition-colors duration-300 ease-in-out text-center text-[#00FF00] hover:text-white">View archive</h1>
+          <h1 className="transition-colors duration-300 ease-in-out text-center text-green-500 hover:text-white">View archive</h1>
       </Link>
     </motion.section>
   );
