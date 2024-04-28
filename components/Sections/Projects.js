@@ -29,7 +29,7 @@ export default function Projects() {
         ))}
       </div>
       <Link href={'/projects'}>
-          <h1 className="transition-colors duration-300 ease-in-out text-center text-green-500 hover:text-white">View archive</h1>
+          <h1 className="transition-colors duration-300 ease-in-out text-center text-white hover:text-green-500 underline underline-offset-8">View archive</h1>
       </Link>
     </motion.section>
   );
