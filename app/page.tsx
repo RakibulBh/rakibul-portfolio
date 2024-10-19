@@ -6,7 +6,6 @@ import LandingPage from "@/components/landing-section/landing-page";
 import Navbar from "@/components/navbar/navbar";
 import ProjectsPage from "@/components/projects-section/projects-page";
 import ReviewsPage from "@/components/reviews-section/reviews-page";
-import Image from "next/image";
 
 export default function Main() {
   return (

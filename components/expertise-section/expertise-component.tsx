@@ -1,5 +1,6 @@
 import { cn } from "@/libs/utils";
 import { MoveUpRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const ExpertiseContainer = ({
@@ -27,14 +28,16 @@ const ExpertiseContainer = ({
         <h3 className="capitalize">{name}</h3>
       </div>
       <p className="text-sm text-gray-400">{description}</p>
-      <div className="flex gap-x-2 items-center hover:cursor-pointer group">
-        <div className="w-6 h-6 flex justify-center items-center rounded-full text-white bg-transparent border-[1px] border-white">
-          <MoveUpRight size={14} />
+      <Link href={link}>
+        <div className="flex gap-x-2 items-center hover:cursor-pointer group">
+          <div className="w-6 h-6 flex justify-center items-center rounded-full text-white bg-transparent border-[1px] border-white">
+            <MoveUpRight size={14} />
+          </div>
+          <p className="text-sm group-hover:underline group-hover:underline-offset-6 ">
+            WEBDEV PROJECTS
+          </p>
         </div>
-        <p className="text-sm group-hover:underline group-hover:underline-offset-6 ">
-          WEBDEV PROJECTS
-        </p>
-      </div>
+      </Link>
     </div>
   );
 };

@@ -29,6 +29,7 @@ const ExpertisePage = () => {
       <div className="flex gap-x-6">
         {expertise.map((expertise, i) => (
           <ExpertiseContainer
+            key={expertise.name}
             name={expertise.name}
             description={expertise.description}
             i={i}

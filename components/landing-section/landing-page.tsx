@@ -5,7 +5,9 @@ const LandingPage = () => {
   return (
     <div className="mx-auto bg-gradient-to-r from-[#00B8D9] from-10% to-80% to-[#12162B] h-screen flex flex-col justify-between">
       <div className="text-center space-y-2 pt-44">
-        <p className="text-6xl font-bold text-white">I'm Rakibul Bhuiyan</p>
+        <p className="text-6xl font-bold text-white">
+          I&apos;m Rakibul Bhuiyan
+        </p>
         <p className="font-sm text-gray-400 font-bold">
           Web/Game Developer & 2nd year Computer Science Student
         </p>
