@@ -7,3 +7,26 @@
     text-wrap: balance;
   }
 }
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.letter-spacing {
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+.projects-container {
+  width: full;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em 1em;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}

@@ -17,9 +17,9 @@ const ExpertiseContainer = ({
   return (
     <div
       className={cn(
-        "px-8 py-4 flex flex-col justify-between rounded-md text-white",
+        "px-8 py-4 flex flex-col justify-between rounded-md text-white z-10 hover:-translate-y-10 transition-transform ease-in-out duration-700 ",
         i == 0 ? "bg-[#00B8D9]/10" : "bg-[#959AA5]/10",
-        i == 2 && "border-[2px] border-white",
+        i == 2 && "border-[1px] border-white",
         i == 1 ? "w-80 h-64" : "w-72 h-56 "
       )}
     >
