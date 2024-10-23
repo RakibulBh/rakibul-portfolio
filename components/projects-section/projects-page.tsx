@@ -15,7 +15,7 @@ const ProjectsPage = () => {
           </p>
         </div>
         <Navigation />
-        <div className="projects-container">
+        <div className="h-[60%] projects-container">
           <Project />
           <Project />
           <Project />
