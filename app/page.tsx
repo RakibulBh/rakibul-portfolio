@@ -15,7 +15,7 @@ export default function Main() {
       <ExpertisePage />
       <ProjectsPage />
       <ExperiencesPage />
-      <ReviewsPage />
+      {/* <ReviewsPage /> */}
       <Footer />
     </main>
   );
