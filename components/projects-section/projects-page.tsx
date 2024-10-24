@@ -1,3 +1,4 @@
+import { projects } from "@/libs/data";
 import Navigation from "./navigation";
 import Project from "./project-component";
 
@@ -16,12 +17,13 @@ const ProjectsPage = () => {
         </div>
         <Navigation />
         <div className="h-[60%] projects-container">
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          {projects.map((project) => (
+            <Project
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+            />
+          ))}
         </div>
       </div>
     </div>
