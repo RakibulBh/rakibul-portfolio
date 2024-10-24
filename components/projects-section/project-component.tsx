@@ -21,7 +21,7 @@ const Project = ({
       </div>
       <div className="flex justify-between gap-2">
         {technologies.map((technology) => (
-          <Technology name={technology} />
+          <Technology key={technology} name={technology} />
         ))}
       </div>
     </div>

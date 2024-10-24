@@ -17,8 +17,9 @@ const ProjectsPage = () => {
         </div>
         <Navigation />
         <div className="h-[60%] projects-container">
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <Project
+              key={i}
               title={project.title}
               description={project.description}
               technologies={project.technologies}
