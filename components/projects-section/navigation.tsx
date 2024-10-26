@@ -1,29 +1,46 @@
 import { MoveUpRight } from "lucide-react";
 import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 const buttons = [
   {
     title: "Top Projects",
+    tag: "top-projects",
   },
   {
     title: "Web",
+    tag: "web",
   },
   {
     title: "Game",
+    tag: "game",
   },
   {
     title: "Other",
+    tag: "other",
   },
 ];
 
-const Navigation = () => {
+const Navigation = ({
+  currentState,
+  setCurrentState,
+}: {
+  currentState: string;
+  setCurrentState: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
     <div className="flex justify-between items-center">
       <div className="space-x-2">
         {buttons.map((button, i) => (
           <Button
+            onClick={() => setCurrentState(button.tag)}
             key={i}
-            className="bg-[#FFFFFF] bg-opacity-5 text-white px-4 py-2 rounded-md border-white border-[1px]"
+            className={cn(
+              "text-white px-4 py-2 rounded-md",
+              currentState === button.tag
+                ? "bg-[#00B8D9] hover:bg-[#00A8C6]"
+                : "bg-white bg-opacity-5 hover:bg-[#00B8D9] hover:bg-opacity-10 border-white border-[1px] border-opacity-15"
+            )}
           >
             {button.title}
           </Button>

@@ -1,8 +1,12 @@
+"use client";
 import { projects } from "@/libs/data";
 import Navigation from "./navigation";
 import Project from "./project-component";
+import { useState } from "react";
 
 const ProjectsPage = () => {
+  const [currentState, setCurrentState] = useState("top-projects");
+
   return (
     <div className="min-h-screen bg-[#12162B]">
       <div className="bg-[#20688C] absolute blur-[18rem] w-[40rem] h-[20rem] z-0 left-[8rem] top-[125rem] " />
@@ -15,7 +19,10 @@ const ProjectsPage = () => {
             I am not just another player in the game; Iam the disruptor
           </p>
         </div>
-        <Navigation />
+        <Navigation
+          currentState={currentState}
+          setCurrentState={setCurrentState}
+        />
         <div className="h-[60%] projects-container">
           {projects.map((project, i) => (
             <Project
