@@ -19,3 +19,23 @@ export const projects = [
     ],
   },
 ];
+
+export const expertise = [
+  {
+    title: "Game Developer",
+    description: "I like developing games when I have some free time",
+    link: "https://www.rakibulbhuiyan.engineer",
+  },
+  {
+    title: "Web developer",
+    description:
+      "This is what I have most experience with, having created many full-stack web applications.",
+    link: "https://www.rakibulbhuiyan.engineer",
+  },
+  {
+    title: "Bot developer",
+    description:
+      "Building discord bots, webscrapers can be fun a lot of the times.",
+    link: "https://www.rakibulbhuiyan.engineer",
+  },
+];

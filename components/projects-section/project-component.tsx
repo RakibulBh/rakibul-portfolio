@@ -13,8 +13,8 @@ const Project = ({
 }) => {
   return (
     <div className="rounded-xl p-4 bg-[#FFFFFF] bg-opacity-5 border-[1px] border-white flex flex-col gap-4">
-      <div className="flex justify-center h-60">
-        <Image className="max-w-[400px]" src={img} alt="project-picture" />
+      <div className="flex justify-center h-48 ">
+        <Image className="max-w-[300px]" src={img} alt="project-picture" />
       </div>
       <div className="space-y-2">
         <h1 className="font-bold text-white">{title}</h1>

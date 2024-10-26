@@ -13,8 +13,8 @@ const LandingPage = () => {
             Web/Game Developer & 2nd year Computer Science Student
           </p>
         </div>
-        <div className="absolute bg-[#C05F44] w-[40rem] h-[28rem] rounded-full left-[10rem] top-[12rem] opacity-50 blur-[8rem] z-5" />
-        <div className="absolute bg-[#00B8D9] w-[40rem] h-[38rem] rounded-full left-[40rem] top-[10rem] opacity-20 blur-3xl z-5" />
+        {/* <div className="absolute bg-[#C05F44] w-[40rem] h-[28rem] rounded-full left-[10rem] top-[12rem] opacity-50 blur-[8rem] z-5" />
+        <div className="absolute bg-[#00B8D9] w-[40rem] h-[38rem] rounded-full left-[40rem] top-[10rem] opacity-20 blur-3xl z-5" /> */}
         <div className="flex justify-center">
           {/* <Image
             className="absolute top-[20rem] z-10"
@@ -28,9 +28,9 @@ const LandingPage = () => {
           <div className="flex gap-x-10"></div>
         </div>
       </div>
-      <p className="letter-spacing text-[1rem] absolute -rotate-90 font-semibold text-gray-300 top-[20rem]">
+      {/* <p className="letter-spacing text-[1rem] absolute -rotate-90 font-semibold text-gray-300 top-[20rem]">
         Rakibul Bhuiyan
-      </p>
+      </p> */}
     </>
   );
 };

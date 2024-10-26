@@ -18,7 +18,7 @@ export const Links = ({ name }: { name: string }) => {
 
 const ExperienceComponent = () => {
   return (
-    <div className="bg-white bg-opacity-5 border-[1px] border-white border-opacity-15 rounded-md p-4 w-1/2 h-[20rem] flex flex-col justify-between hover:bg-[#00B8D9] hover:bg-opacity-10 transition-colors ease-in-out duration-500 ">
+    <div className="bg-white bg-opacity-5 border-[1px] border-white border-opacity-15 rounded-md p-4 w-[45%] h-[20rem] flex flex-col justify-between hover:bg-[#00B8D9] hover:bg-opacity-10 transition-colors ease-in-out duration-500 ">
       <div className="">
         <div className="flex justify-end">
           <p className="p-2 text-white bg-white bg-opacity-5 border-[1px] border-opacity-15 text-xs rounded-md">

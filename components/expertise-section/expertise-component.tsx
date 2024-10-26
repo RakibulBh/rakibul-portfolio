@@ -24,7 +24,7 @@ const ExpertiseContainer = ({
       )}
     >
       <div>
-        <p className="text-gray-500 opac">0{i}</p>
+        <p className="text-gray-500 opac">0{i + 1}</p>
         <h3 className="capitalize">{name}</h3>
       </div>
       <p className="text-sm text-gray-400">{description}</p>

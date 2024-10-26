@@ -9,7 +9,7 @@ import ProjectsPage from "@/components/projects-section/projects-page";
 
 export default function Main() {
   return (
-    <main className="">
+    <main className="w-full">
       <Navbar />
       <LandingPage />
       <ExpertisePage />
