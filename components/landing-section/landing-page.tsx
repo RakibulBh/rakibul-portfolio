@@ -1,5 +1,7 @@
 // import Image from "next/image";
 import React from "react";
+import LinkedIn from "@/public/logos/download.png";
+import Image from "next/image";
 
 const LandingPage = () => {
   return (
@@ -24,8 +26,27 @@ const LandingPage = () => {
             src="/project-pic.png"
           /> */}
         </div>
-        <div className="h-28 bg-[#14243C] flex items-center px-40 z-20">
-          <div className="flex gap-x-10"></div>
+        <div className="h-28 bg-[#14243C] flex items-center px-20 z-20">
+          <div className="flex gap-x-10">
+            {/* <Image
+              alt="linkedin"
+              width={300}
+              height={200}
+              src="/logos/download.png"
+            />
+            <Image
+              alt="Github"
+              width={200}
+              height={400}
+              src="/logos/github.png"
+            />
+            <Image
+              alt="Leetcode"
+              width={100}
+              height={400}
+              src="/logos/leetcode.svg"
+            /> */}
+          </div>
         </div>
       </div>
       {/* <p className="letter-spacing text-[1rem] absolute -rotate-90 font-semibold text-gray-300 top-[20rem]">

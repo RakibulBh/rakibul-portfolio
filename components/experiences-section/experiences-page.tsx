@@ -2,6 +2,7 @@ import React from "react";
 import ExperienceSection from "./experience-section";
 import { experiences } from "@/libs/data";
 import { Experience } from "@/types";
+import ExperienceSectionMobile from "./experience-section-mobile";
 
 const ExperiencesPage = () => {
   return (
@@ -14,9 +15,14 @@ const ExperiencesPage = () => {
           I am not just another student.
         </p>
       </div>
-      <div className="mt-20 w-full">
+      <div className="hidden md:block md:mt-20 md:w-full">
         {experiences.map((experience: Experience, i) => (
           <ExperienceSection experience={experience} key={i} i={i + 1} />
+        ))}
+      </div>
+      <div className="mt-16 w-full block md:hidden">
+        {experiences.map((experience: Experience, i) => (
+          <ExperienceSectionMobile experience={experience} key={i} i={i + 1} />
         ))}
       </div>
     </div>
