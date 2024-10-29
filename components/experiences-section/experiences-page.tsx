@@ -1,26 +1,7 @@
 import React from "react";
 import ExperienceSection from "./experience-section";
-
-const projects = [
-  {
-    title: "hello",
-  },
-  {
-    title: "hello",
-  },
-  {
-    title: "hello",
-  },
-  {
-    title: "hello",
-  },
-  {
-    title: "hello",
-  },
-  {
-    title: "hello",
-  },
-];
+import { experiences } from "@/libs/data";
+import { Experience } from "@/types";
 
 const ExperiencesPage = () => {
   return (
@@ -30,12 +11,12 @@ const ExperiencesPage = () => {
           Professional Experience
         </h1>
         <p className="tetx-md font-semibold text-gray-400">
-          I am not just another player in the game; I’am the disruptor
+          I am not just another student.
         </p>
       </div>
-      <div className="mt-20">
-        {projects.map((project, i) => (
-          <ExperienceSection key={i} i={i + 1} />
+      <div className="mt-20 w-full">
+        {experiences.map((experience: Experience, i) => (
+          <ExperienceSection experience={experience} key={i} i={i + 1} />
         ))}
       </div>
     </div>
