@@ -1,7 +1,7 @@
 // import Image from "next/image";
 import React from "react";
-import LinkedIn from "@/public/logos/download.png";
-import Image from "next/image";
+// import LinkedIn from "@/public/logos/download.png";
+// import Image from "next/image";
 
 const LandingPage = () => {
   return (
