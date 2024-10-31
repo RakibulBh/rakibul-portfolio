@@ -7,11 +7,11 @@ const LandingPage = () => {
   return (
     <>
       <div className="bg-gradient-to-r from-[#00B8D9] from-0% via-[#0891B2] via-10% to-[#12162B] h-screen flex flex-col justify-between">
-        <div className="text-center space-y-2 pt-36 z-10">
-          <p className="text-6xl font-bold text-white">
+        <div className="text-center space-y-2 pt-36 z-10 px-12 sm:px-10 md:px-8 lg:px-0">
+          <p className="lg:text-6xl md:text-4xl sm:text-3xl text-2xl font-bold text-white">
             I&apos;m Rakibul Bhuiyan
           </p>
-          <p className="font-sm text-gray-400 font-bold">
+          <p className="lg:text-md md:text-sm text-xs text-gray-400 font-bold">
             Web/Game Developer & 2nd year Computer Science Student
           </p>
         </div>
