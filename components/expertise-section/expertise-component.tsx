@@ -17,23 +17,21 @@ const ExpertiseContainer = ({
   return (
     <div
       className={cn(
-        "px-8 py-4 flex flex-col justify-between rounded-md text-white z-10 hover:-translate-y-10 transition-transform ease-in-out duration-700 ",
-        i == 0 ? "bg-[#00B8D9]/10" : "bg-[#959AA5]/10",
-        i == 2 && "border-[1px] border-white",
-        i == 1 ? "w-80 h-64" : "w-72 h-56 "
+        "px-8 py-4 w-full h-64  flex flex-col border-[1px] border-white border-opacity-10 justify-between rounded-tl-2xl rounded-br-2xl rounded-tr-xl rounded-bl-xl text-white z-10 md:hover:-translate-y-10 transition-transform ease-in-out duration-700 bg-[#959AA5]/10 hover:bg-[#00B8D9] hover:bg-opacity-10 pb-12",
+        i == 1 ? "lg:w-80 lg:h-64 md:h-80" : "lg:w-72 lg:h-56 md:h-72"
       )}
     >
-      <div>
+      <div className="space-y-[2px]">
         <p className="text-gray-500 opac">0{i + 1}</p>
         <h3 className="capitalize">{name}</h3>
+        <p className="text-sm text-gray-400">{description}</p>
       </div>
-      <p className="text-sm text-gray-400">{description}</p>
       <Link href={link}>
         <div className="flex gap-x-2 items-center hover:cursor-pointer group">
-          <div className="w-6 h-6 flex justify-center items-center rounded-full text-white bg-transparent border-[1px] border-white">
-            <MoveUpRight size={14} />
+          <div className="w-6 h-6 flex justify-center items-center rounded-full text-white bg-white bg-opacity-5 border-opacity-10 border-[1px] border-white">
+            <MoveUpRight className="" size={14} />
           </div>
-          <p className="text-sm group-hover:underline group-hover:underline-offset-6 ">
+          <p className="text-xs lg:text-sm group-hover:underline group-hover:underline-offset-6 ">
             WEBDEV PROJECTS
           </p>
         </div>

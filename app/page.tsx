@@ -13,8 +13,8 @@ export default function Main() {
       <Navbar />
       <LandingPage />
       <ExpertisePage />
-      <ProjectsPage />
-      <ExperiencesPage />
+      {/* <ProjectsPage /> */}
+      {/* <ExperiencesPage /> */}
       {/* <ReviewsPage /> */}
       <Footer />
     </main>
