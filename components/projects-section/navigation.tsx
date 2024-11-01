@@ -36,7 +36,7 @@ const Navigation = ({
             onClick={() => setCurrentState(button.tag)}
             key={i}
             className={cn(
-              "text-white px-4 py-2 rounded-md",
+              "text-white px-2 text-xs py-1 md:px-4 md:py-2 md:text-md rounded-md",
               currentState === button.tag
                 ? "bg-[#00B8D9] hover:bg-[#00A8C6]"
                 : "bg-white bg-opacity-5 hover:bg-[#00B8D9] hover:bg-opacity-10 border-white border-[1px] border-opacity-15"
@@ -46,7 +46,7 @@ const Navigation = ({
           </Button>
         ))}
       </div>
-      <div className="flex gap-2 items-center group hover:cursor-pointer">
+      <div className="hidden md:flex gap-2 items-center group hover:cursor-pointer">
         <div className="bg-[#FFFFFF] bg-opacity-5 rounded-full flex items-center justify-center w-7 h-7 text-white border-[1px] border-white">
           <MoveUpRight size={20} />
         </div>
