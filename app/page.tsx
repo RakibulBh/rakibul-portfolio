@@ -14,7 +14,7 @@ export default function Main() {
       <LandingPage />
       <ExpertisePage />
       <ProjectsPage />
-      {/* <ExperiencesPage /> */}
+      <ExperiencesPage />
       {/* <ReviewsPage /> */}
       <Footer />
     </main>

@@ -8,14 +8,14 @@ const ExperiencesPage = () => {
   return (
     <div className="min-h-screen px-8 bg-[#12162B] pt-20 flex flex-col items-center">
       <div className="space-y-2 text-center">
-        <h1 className="text-white font-bold text-5xl">
+        <h1 className="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl">
           Professional Experience
         </h1>
-        <p className="tetx-md font-semibold text-gray-400">
+        <p className="text-xs md:text-sm lg:text-md font-semibold text-gray-400">
           I am not just another student.
         </p>
       </div>
-      <div className="hidden md:block md:mt-20 md:w-full">
+      <div className="hidden md:block mt-20 w-full px-12">
         {experiences.map((experience: Experience, i) => (
           <ExperienceSection experience={experience} key={i} i={i + 1} />
         ))}
