@@ -6,7 +6,7 @@ const ExperienceComponent = ({ experience }: { experience: Experience }) => {
   return (
     <div
       className={
-        "w-[45%] h-80 space-y-4 bg-white bg-opacity-5 border-white border-[1px] border-opacity-15 px-4 py-6 rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md"
+        "w-[45%] min-h-80 space-y-4 bg-white bg-opacity-5 border-white border-[1px] border-opacity-15 px-4 py-6 rounded-tl-xl rounded-br-xl rounded-tr-md rounded-bl-md"
       }
     >
       {/* TOP PART */}
@@ -28,7 +28,7 @@ const ExperienceComponent = ({ experience }: { experience: Experience }) => {
       <ul className="text-gray-400">
         {experience.description.map((point: string) => (
           <li
-            className="ml-4 text-[10px] lg:text-[1rem]"
+            className="ml-4 text-[9px] lg:text-[1rem]"
             style={{ listStyle: "disc" }}
             key={point}
           >
