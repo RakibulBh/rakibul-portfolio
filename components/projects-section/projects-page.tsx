@@ -1,11 +1,17 @@
 "use client";
-import { projects } from "@/libs/data";
+import {
+  gameProjects,
+  otherProjects,
+  topProjects,
+  webProjects,
+} from "@/libs/data";
 import Navigation from "./navigation";
-import Project from "./project-component";
 import { useState } from "react";
+import { Project } from "@/types";
+import ProjectComponent from "./project-component";
 
 const ProjectsPage = () => {
-  const [currentState, setCurrentState] = useState("top-projects");
+  const [currentState, setCurrentState] = useState("top");
 
   return (
     <div className="min-h-screen bg-[#12162B]">
@@ -25,14 +31,22 @@ const ProjectsPage = () => {
           setCurrentState={setCurrentState}
         />
         <div className="h-[60%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects.map((project, i) => (
-            <Project
-              key={i}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-            />
-          ))}
+          {currentState === "top" &&
+            topProjects.map((project: Project, i) => (
+              <ProjectComponent key={i} project={project} />
+            ))}
+          {currentState === "web" &&
+            webProjects.map((project: Project, i) => (
+              <ProjectComponent key={i} project={project} />
+            ))}
+          {currentState === "game" &&
+            gameProjects.map((project: Project, i) => (
+              <ProjectComponent key={i} project={project} />
+            ))}
+          {currentState === "other" &&
+            otherProjects.map((project: Project, i) => (
+              <ProjectComponent key={i} project={project} />
+            ))}
         </div>
       </div>
     </div>

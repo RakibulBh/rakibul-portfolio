@@ -1,11 +1,13 @@
-import { Experience } from "@/types";
+import { Experience, Project } from "@/types";
 
-export const projects = [
+export const topProjects: Project[] = [
   {
     title: "Habituate",
     description:
-      "Habituate not jus tany habit tracking app, it rewards you for completing habits, gamifying the idea. Complete habits and gain XP as well as level up with friends!",
+      "Habituate is not just any habit tracking app, it rewards you for completing habits, gamifying the idea. Complete habits and gain XP as well as level up with friends!",
     technologies: ["Next.js", "MongoDB", "Node.js", "React.js", "TypeScript"],
+    link: "https://github.com/RakibulBh/Habituate",
+    img: null,
   },
   {
     title: "resumatch.ai",
@@ -19,8 +21,114 @@ export const projects = [
       "TypeScript",
       "AWS",
     ],
+    img: null,
+    link: "https://github.com/RakibulBh/resumatch-ai",
+  },
+  {
+    title: "TicTacToe AI",
+    description: "Implemented a TicTacToe AI using the MiniMax algorithm.",
+    technologies: ["Next.js", "Node.js", "React.js", "TypeScript"],
+    link: "https://github.com/RakibulBh/ttt-minimax-algorithm",
+    img: null,
+  },
+  {
+    title: "Rakibul's Portfolio",
+    description: "Checkout how this portfolio was made!",
+    technologies: ["Next.js", "TypeScript", "Node.js"],
+    img: null,
+    link: "https://github.com/RakibulBh/rakibul-portfolio",
+  },
+  {
+    title: "YelpCamp",
+    description:
+      "YelpCamp is an app that helps you review and rate camps around the US, it also allows you to create your own camp!",
+    technologies: ["EJS", "JavaScript", "MongoDB", "Express.js", "Cloudinary"],
+    link: "https://github.com/RakibulBh/YelpCamp",
+    img: null,
+  },
+  {
+    title: "Notion Inspired To-List",
+    description:
+      "Not just any ordinary to-do list, this to-do list includes O-Auth, and users can have tagged to-dos as well as a sidebar including all information about their to-dos.",
+    technologies: [
+      "Next.js",
+      "JavaScript",
+      "Supabase",
+      "PostgreSQL",
+      "PrismaORM",
+    ],
+    link: "https://github.com/RakibulBh/YelpCamp",
+    img: null,
   },
 ];
+
+export const webProjects: Project[] = [
+  {
+    title: "Habituate",
+    description:
+      "Habituate is not just any habit tracking app, it rewards you for completing habits, gamifying the idea. Complete habits and gain XP as well as level up with friends!",
+    technologies: ["Next.js", "MongoDB", "Node.js", "React.js", "TypeScript"],
+    link: "https://github.com/RakibulBh/Habituate",
+    img: null,
+  },
+  {
+    title: "resumatch.ai",
+    description:
+      "Tired of tailoring your resume for hundreds of applications? Let resumatch.ai do it for you in 2 seconds!",
+    technologies: [
+      "Next.js",
+      "MongoDB",
+      "Node.js",
+      "React.js",
+      "TypeScript",
+      "AWS",
+    ],
+    img: null,
+    link: "https://github.com/RakibulBh/resumatch-ai",
+  },
+  {
+    title: "TicTacToe AI",
+    description: "Implemented a TicTacToe AI using the MiniMax algorithm.",
+    technologies: ["Next.js", "Node.js", "React.js", "TypeScript"],
+    link: "https://github.com/RakibulBh/ttt-minimax-algorithm",
+    img: null,
+  },
+  {
+    title: "Rakibul's Portfolio",
+    description: "Checkout how this portfolio was made!",
+    technologies: ["Next.js", "TypeScript", "Node.js"],
+    img: null,
+    link: "https://github.com/RakibulBh/rakibul-portfolio",
+  },
+  {
+    title: "YelpCamp",
+    description:
+      "YelpCamp is an app that helps you review and rate camps around the US, it also allows you to create your own camp!",
+    technologies: ["EJS", "JavaScript", "MongoDB", "Express.js", "Cloudinary"],
+    link: "https://github.com/RakibulBh/YelpCamp",
+    img: null,
+  },
+  {
+    title: "Notion Inspired To-List",
+    description:
+      "Not just any ordinary to-do list, this to-do list includes O-Auth, and users can have tagged to-dos as well as a sidebar including all information about their to-dos.",
+    technologies: [
+      "Next.js",
+      "JavaScript",
+      "Supabase",
+      "PostgreSQL",
+      "PrismaORM",
+    ],
+    link: "https://github.com/RakibulBh/YelpCamp",
+    img: null,
+  },
+];
+
+export const gameProjects: Project[] = [];
+
+export const otherProjects: Project[] = [];
+
+// https://github.com/RakibulBh/advanced-todolist
 
 export const expertise = [
   {

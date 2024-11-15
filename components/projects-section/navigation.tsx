@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const buttons = [
   {
     title: "Top Projects",
-    tag: "top-projects",
+    tag: "top",
   },
   {
     title: "Web",
