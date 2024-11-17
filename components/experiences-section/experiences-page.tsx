@@ -3,14 +3,13 @@ import ExperienceSection from "./experience-section";
 import { experiences } from "@/libs/data";
 import { Experience } from "@/types";
 import ExperienceSectionMobile from "./experience-section-mobile";
+import SectionTitle from "../ui/section-title";
 
 const ExperiencesPage = () => {
   return (
     <div className="min-h-screen px-8 bg-[#12162B] pt-20 flex flex-col items-center">
       <div className="space-y-2 text-center">
-        <h1 className="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl">
-          Professional Experience
-        </h1>
+        <SectionTitle>Professional Experience</SectionTitle>
         <p className="text-xs md:text-sm lg:text-md font-semibold text-gray-400">
           I am not just another student.
         </p>
