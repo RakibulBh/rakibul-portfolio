@@ -1,4 +1,4 @@
-import { Experience, Project } from "@/types";
+import { Experience, Project, Technology } from "@/types";
 
 export const topProjects: Project[] = [
   {
@@ -127,8 +127,6 @@ export const webProjects: Project[] = [
 export const gameProjects: Project[] = [];
 
 export const otherProjects: Project[] = [];
-
-// https://github.com/RakibulBh/advanced-todolist
 
 export const expertise = [
   {

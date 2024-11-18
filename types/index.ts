@@ -13,3 +13,10 @@ export type Project = {
   img: string | null;
   link: string;
 };
+
+export type Technology = {
+  icon: any;
+  label: string;
+  description: string;
+  bgColor?: string;
+};
