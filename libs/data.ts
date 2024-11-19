@@ -150,6 +150,17 @@ export const expertise = [
 
 export const experiences: Experience[] = [
   {
+    companyName: "Brunel Talent Marketplace",
+    role: "Full-stack developer",
+    description: [
+      "Involved in the development of full-stack projects for various clients through BTM consulting, delivering high-quality software within established timelines. ",
+      "Architected university software systems while seamlessly adapting to varied codebases and tech stacks. ",
+      "Collaborated in a scrum environment to drive project deliverables, taking part in sprint planning and daily stand-ups. ",
+    ],
+    skills: ["Python", "React", "AI", "Algorithms"],
+    date: "Nov 2024 - Present",
+  },
+  {
     companyName: "Code Camp",
     role: "Head Teacher",
     description: [
