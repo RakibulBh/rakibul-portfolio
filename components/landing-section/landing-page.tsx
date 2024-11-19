@@ -48,7 +48,7 @@ const LandingPage = () => {
         </div>
         <div className="h-28 bg-[#14243C] flex items-center z-20 px-10 sm:px-20 md:px-36 lg:px-80 lg:py-4 py-6">
           <div className="h-full w-full justify-between flex">
-            {socialNetworks.map((social: any, i: number) => (
+            {socialNetworks.map((social, i: number) => (
               <social.icon key={i} style={{ opacity: 0.5 }} fill="#ffffff" />
             ))}
           </div>
