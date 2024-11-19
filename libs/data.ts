@@ -1,4 +1,4 @@
-import { Experience, Project, Technology } from "@/types";
+import { Experience, Project } from "@/types";
 
 export const topProjects: Project[] = [
   {

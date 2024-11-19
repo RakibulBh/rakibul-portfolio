@@ -4,15 +4,17 @@ import { experiences } from "@/libs/data";
 import { Experience } from "@/types";
 import ExperienceSectionMobile from "./experience-section-mobile";
 import SectionTitle from "../ui/section-title";
+import SectionDescription from "../ui/section-description";
 
 const ExperiencesPage = () => {
   return (
     <div className="min-h-screen px-8 bg-[#12162B] pt-20 flex flex-col items-center">
       <div className="space-y-2 text-center">
         <SectionTitle>Professional Experience</SectionTitle>
-        <p className="text-xs md:text-sm lg:text-md font-semibold text-gray-400">
-          I am not just another student.
-        </p>
+        <SectionDescription>
+          Always looking for new opportunities and experiences to expand on my
+          skillset as a developer, teamwork and communication is my focus.
+        </SectionDescription>
       </div>
       <div className="hidden md:block mt-20 w-full px-12">
         {experiences.map((experience: Experience, i) => (

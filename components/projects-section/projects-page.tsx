@@ -10,6 +10,7 @@ import { useState } from "react";
 import { Project } from "@/types";
 import ProjectComponent from "./project-component";
 import SectionTitle from "../ui/section-title";
+import SectionDescription from "../ui/section-description";
 
 const ProjectsPage = () => {
   const [currentState, setCurrentState] = useState("top");
@@ -21,9 +22,10 @@ const ProjectsPage = () => {
       <div className="px-6 md:px-auto flex flex-col gap-10">
         <div className="text-center flex items-center flex-col gap-4">
           <SectionTitle>My Work</SectionTitle>
-          <p className="text-gray-200 md:text-md text-xs">
-            I am not just another player in the game; Iam the disruptor
-          </p>
+          <SectionDescription>
+            My projects vary in technologies, I like to learn new things and
+            challlenge myself for every new project I work on.
+          </SectionDescription>
         </div>
         <Navigation
           currentState={currentState}

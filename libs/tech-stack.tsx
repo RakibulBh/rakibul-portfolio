@@ -10,64 +10,75 @@ import Tailwind from "@/public/icons/tailwind.svg";
 import Next from "@/public/icons/next.svg";
 import Git from "@/public/icons/git.svg";
 import React from "@/public/icons/react.svg";
+import HTML from "@/public/icons/html.svg";
+import AWS from "@/public/icons/aws.svg";
 
 export const TECH_STACK: Technology[] = [
+  // Languages
   {
-    icon: <Dotnet fill="#FFFFFF" />,
-    label: "Dotnet",
-    description: "backend language",
-    bgColor: "#512BD4",
+    icon: <Python fill="#3776AB" />,
+    label: "Python",
+    description: "General language.",
   },
   {
     icon: <JS fill="#F7DF1E" />,
     label: "JavaScript",
-    description: "backend language",
+    description: "Web scripting language.",
   },
   {
     icon: <TS fill="#3178C6" />,
     label: "TypeScript",
-    description: "backend language",
+    description: "Typed JavaScript superset.",
   },
   {
-    icon: <Python fill="#3776AB" />,
-    label: "Python",
-    description: "backend language",
-    bgColor: "",
+    icon: <Dotnet fill="#FFFFFF" />,
+    label: ".NET",
+    description: "App Development Platform",
+    bgColor: "#512BD4",
   },
+
+  // Frameworks & Libraries
   {
-    icon: <Prisma fill="#2D3748" />,
-    label: "Prisma",
-    description: "An open source ORM",
-  },
-  {
-    icon: <PG fill="#4169E1" />,
-    label: "PostgreSQL",
-    description: "A database.",
-    bgColor: "#FFFFFF",
-  },
-  {
-    icon: <Mongo fill="#47A248" />,
-    label: "MongoDB",
-    description: "A database.",
+    icon: <React fill="#61DAFB" />,
+    label: "React",
+    description: "JavaScript framwork",
   },
   {
     icon: <Next fill="#000000" />,
     label: "Next.js",
-    description: "A database.",
+    description: "React framework.",
   },
   {
     icon: <Tailwind fill="#06B6D4" />,
-    label: "Tailwind CSS",
-    description: "A database.",
+    label: "Tailwind",
+    description: "Utility-first CSS.",
   },
   {
-    icon: <React fill="#61DAFB" />,
-    label: "Tailwind CSS",
-    description: "A database.",
+    icon: <Prisma fill="#2D3748" />,
+    label: "Prisma",
+    description: "Modern ORM tool.",
+  },
+
+  // Databases & Tools
+  {
+    icon: <PG fill="#4169E1" />,
+    label: "PostgreSQL",
+    description: "Relational database.",
+  },
+  {
+    icon: <Mongo fill="#47A248" />,
+    label: "MongoDB",
+    description: "NoSQL database.",
   },
   {
     icon: <Git fill="#F05032" />,
-    label: "Tailwind CSS",
-    description: "A database.",
+    label: "Git",
+    description: "Version control.",
+  },
+  {
+    icon: <AWS fill="#232F3E" />,
+    label: "AWS",
+    description: "Cloud infrastructure.",
+    bgColor: "#ffffff",
   },
 ];
