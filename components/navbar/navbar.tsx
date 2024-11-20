@@ -1,4 +1,3 @@
-import { cn } from "@/libs/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -31,7 +30,7 @@ const Navbar = () => {
 
         {/* Links */}
         <div className="flex gap-x-4">
-          {navItems.map((navItem, i) => (
+          {navItems.map((navItem) => (
             <Link key={navItem.title} href={"#" + navItem.section}>
               <p className="text-white p-2 duration-300 ease-in-out border-b-2 border-transparent hover:text-[#00B8D9] hover:border-[#00B8D9]">
                 {navItem.title}
