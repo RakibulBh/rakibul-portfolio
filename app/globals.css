@@ -22,3 +22,7 @@ body {
     --radius: 0.5rem;
   }
 }
+
+:root {
+  scroll-behavior: smooth;
+}

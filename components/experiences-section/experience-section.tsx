@@ -11,7 +11,7 @@ const ExperienceSection = ({
   i: number;
 }) => {
   return (
-    <div className="flex items-center gap-4">
+    <div id="experience" className="flex items-center gap-4">
       {i % 2 == 0 ? (
         <div className="w-[45%] h-[20rem] p-4" />
       ) : (
