@@ -28,7 +28,9 @@ export const TechnologyComponent = ({
         <h2 className="text-xs md:text-sm lg:text-md text-white">
           {technology.label}
         </h2>
-        <p className="text-gray-200 text-xs">{technology.description}</p>
+        <p className="text-gray-200 text-xs hidden sm:block">
+          {technology.description}
+        </p>
       </div>
     </div>
   );
