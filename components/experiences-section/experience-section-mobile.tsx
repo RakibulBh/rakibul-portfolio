@@ -35,8 +35,10 @@ const ExperienceComponent = ({
       {/* TOP PART */}
       <div className="flex justify-between items-center">
         <div>
-          <p className="text-gray-100 text-xs">{experience.companyName}</p>
-          <h1 className="text-md text-white">{experience.role}</h1>
+          <p className="text-gray-100 text-[0.5rem] sm:text-xs">
+            {experience.companyName}
+          </p>
+          <h1 className="text-xs sm:text-md text-white">{experience.role}</h1>
         </div>
         <div className="p-1 bg-white bg-opacity-5 border-[1px] border-white border-opacity-15 ">
           <p className="text-[0.65rem] text-white truncate">

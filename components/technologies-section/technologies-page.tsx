@@ -18,7 +18,7 @@ const TechnologiesPage = () => {
   return (
     <section
       id="technologies"
-      className="space-y-4 py-5 sm:py-10 md:py-20 lg:py-40 bg-[#12162B] px-8 sm:px-16 md:px-32 lg:px-64"
+      className="space-y-4 py-12 sm:py-20 lg:py-40 bg-[#12162B] px-8 sm:px-16 md:px-32 lg:px-64"
     >
       <SectionTitle>Current Technologies</SectionTitle>
       <SectionDescription>
