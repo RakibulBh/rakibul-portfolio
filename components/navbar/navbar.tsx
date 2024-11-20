@@ -1,19 +1,20 @@
 import { cn } from "@/libs/utils";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const navItems = [
   {
-    title: "Home",
+    title: "Technologies",
+    section: "technologies",
   },
   {
-    title: "About",
+    title: "Projects",
+    section: "projects",
   },
   {
-    title: "Services",
-  },
-  {
-    title: "Contact me",
+    title: "Experience",
+    section: "experience",
   },
 ];
 
@@ -31,16 +32,17 @@ const Navbar = () => {
         {/* Links */}
         <div className="flex gap-x-4">
           {navItems.map((navItem, i) => (
-            <p
-              key={navItem.title}
-              className={cn(
-                "text-white  p-2",
-                i === 3 && "border-2 border-white"
-              )}
-            >
-              {navItem.title}
-            </p>
+            <Link key={navItem.title} href={"#" + navItem.section}>
+              <p className="text-white p-2 duration-300 ease-in-out border-b-2 border-transparent hover:text-[#00B8D9] hover:border-[#00B8D9]">
+                {navItem.title}
+              </p>
+            </Link>
           ))}
+          <Link href="mailto:rakibul.career@gmail.com">
+            <p className="text-white p-2 border-2 border-white transition-all duration-300 ease-in-out hover:bg-[#00B8D9] hover:bg-opacity-45 hover:rounded-md">
+              Contact me
+            </p>
+          </Link>
         </div>
       </>
     );
@@ -63,10 +65,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="hidden md:flex justify-between absolute pt-8 md:px-14 lg:px-20 items-center w-full">
+      <nav className="hidden md:flex justify-between absolute pt-8 md:px-14 lg:px-20 items-center w-full z-20">
         {desktopNavbar()}
       </nav>
-      <nav className="md:hidden flex justify-between absolute pt-6 px-4 sm:px-8 items-center w-full">
+      <nav className="md:hidden flex justify-between absolute pt-6 px-4 sm:px-8 items-center w-full z-20">
         {mobileNavbar()}
       </nav>
     </>

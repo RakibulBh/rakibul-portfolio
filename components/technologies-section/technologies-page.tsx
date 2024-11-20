@@ -16,7 +16,10 @@ export const TechnologiesContainer: React.FC = () => {
 
 const TechnologiesPage = () => {
   return (
-    <section className="space-y-4 py-5 sm:py-10 md:py-20 lg:py-40 bg-[#12162B] px-8 sm:px-16 md:px-32 lg:px-64">
+    <section
+      id="technologies"
+      className="space-y-4 py-5 sm:py-10 md:py-20 lg:py-40 bg-[#12162B] px-8 sm:px-16 md:px-32 lg:px-64"
+    >
       <SectionTitle>Current Technologies</SectionTitle>
       <SectionDescription>
         Having experienced and experimented with many different technologies, I

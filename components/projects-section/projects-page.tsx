@@ -16,7 +16,7 @@ const ProjectsPage = () => {
   const [currentState, setCurrentState] = useState("top");
 
   return (
-    <div className="min-h-screen bg-[#12162B]">
+    <div id="projects" className="min-h-screen bg-[#12162B]">
       <div className="hidden lg:block bg-[#20688C] absolute blur-[18rem] w-[40rem] h-[20rem] z-0 left-[8rem] top-[125rem] " />
       {/* CONTENT */}
       <div className="px-6 md:px-auto flex flex-col gap-10">
