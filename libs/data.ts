@@ -162,7 +162,7 @@ export const experiences: Experience[] = [
   },
   {
     companyName: "Code Camp",
-    role: "Head Teacher",
+    role: "Lead Code Tutor",
     description: [
       "Teaching children essential programming concepts like loops, functions, and conditionals as well as game development.",
       "Tutored individual children on debugging procedures and thinking computationally when solving problems.",
