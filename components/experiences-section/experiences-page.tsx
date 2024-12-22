@@ -13,7 +13,7 @@ const ExperiencesPage = () => {
         <SectionTitle>Professional Experience</SectionTitle>
         <SectionDescription>
           Always looking for new opportunities and experiences to expand on my
-          skillset as a developer, teamwork and communication is my focus.
+          skillset as an engineer teamwork and communication is my focus.
         </SectionDescription>
       </div>
       <div className="hidden md:block mt-20 w-full px-12">

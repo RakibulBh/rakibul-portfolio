@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type Experience = {
   companyName: string;
   role: string;
@@ -10,7 +12,7 @@ export type Project = {
   title: string;
   description: string;
   technologies: string[];
-  img: string | null;
+  img: StaticImageData | null;
   link: string;
 };
 
