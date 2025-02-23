@@ -5,3 +5,41 @@
 body {
   font-family: var(--font-inter), sans-serif;
 }
+
+.custom-scrollbar {
+  overflow-x: auto;
+  scrollbar-width: thin; /* Ensures a thin scrollbar */
+  scrollbar-color: #41b883 transparent; /* Primary color for the thumb, transparent track */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Very thin scrollbar */
+  height: 4px; /* For horizontal scrollbars */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #41b883; /* Vue.js primary color */
+  border-radius: 2px; /* Slightly rounded corners for a modern look */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent; /* No track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background-color: transparent; /* Ensure the corner is transparent */
+}
+
+.no-scrollbar {
+  overflow: auto; /* Allow scrolling */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar in WebKit browsers */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
