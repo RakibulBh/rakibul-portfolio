@@ -36,7 +36,6 @@ export const TECHNOLOGIES = [
   "npm",
   "git",
   "github",
-  "figma",
 
   // Hosting & Authentication
   "vercel",

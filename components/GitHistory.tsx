@@ -7,7 +7,7 @@ const GitHistory = () => {
     undefined | ContributionCalendar
   >();
 
-  const gitHistoryPlaceholder = Array.from({ length: 21 }, (_, rowIndex) =>
+  const gitHistoryPlaceholder = Array.from({ length: 100 }, (_, rowIndex) =>
     Array.from(
       { length: 7 },
       (_, colIndex) => `${rowIndex + 1}-${colIndex + 1}`
@@ -54,22 +54,19 @@ const GitHistory = () => {
   }, []);
 
   return (
-    <div className="text-white">
-      <div className="flex items-center gap-1 mb-2">
-        <h1 className="text-[12px] text-gray-200 ">
-          {contributions ? contributions.totalContributions : 0} Contributions
-          in the last year
-        </h1>
-        <p className="text-gray-300 text-[10px]">(Present - Past)</p>
-      </div>
-      <div className="flex gap-1 no-scrollbar">
+    <div className="w-full text-white p-2 space-y-1">
+      <h1 className="text-md text-gray-200 ">
+        {contributions ? contributions.totalContributions : 0} Contributions in
+        the last year (Present - Past)
+      </h1>
+      <div className="flex gap-1 sm:-mt-1 no-scrollbar">
         {contributions &&
           [...contributions.weeks].reverse().map((week, index) => (
             <div key={index} className="flex flex-col gap-[0.12rem]">
               {week.contributionDays.map((day, i) => (
                 <div
                   key={i}
-                  className="w-[0.65rem] h-[0.65rem] rounded-sm"
+                  className="w-[0.2rem] sm:w-[0.4rem] md:w-[0.55rem] lg:w-[0.65rem]  aspect-square rounded-sm"
                   style={{
                     backgroundColor:
                       day.contributionCount / 10 !== 0

@@ -1,12 +1,13 @@
 import Nav from "@/components/Nav";
-import Hero from "@/components/sections/Hero";
-import Image from "next/image";
+import Experience from "@/components/sections/Experiences";
+import Hero from "@/components/sections/Home/Hero";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="min-h-screen">
       <Nav />
       <Hero />
+      <Experience />
     </main>
   );
 }
