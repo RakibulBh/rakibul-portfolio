@@ -55,9 +55,9 @@ const GitHistory = () => {
 
   return (
     <div className="w-full text-white p-2 space-y-1">
-      <h1 className="hidden md:block text-md text-gray-200 ">
+      <h1 className="hidden 2xl:block text-xs 2xl:text-lg text-gray-200 ">
         {contributions ? contributions.totalContributions : 0} Contributions in
-        the last year (Present - Past)
+        the last year
       </h1>
       <h1 className="block md:hidden text-xs text-gray-200 ">Git History</h1>
       <div className="flex gap-1 sm:-mt-1 no-scrollbar">
@@ -67,7 +67,7 @@ const GitHistory = () => {
               {week.contributionDays.map((day, i) => (
                 <div
                   key={i}
-                  className="w-[0.4rem] md:w-[0.55rem] lg:w-[0.65rem]  aspect-square rounded-sm"
+                  className="w-[0.4rem] md:w-[0.55rem] lg:w-[0.45rem] 2xl:w-[0.6rem] aspect-square rounded-sm"
                   style={{
                     backgroundColor:
                       day.contributionCount / 10 !== 0

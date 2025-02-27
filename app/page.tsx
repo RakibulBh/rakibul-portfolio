@@ -5,7 +5,7 @@ import Hero from "@/components/sections/Home/Hero";
 export default function Home() {
   return (
     <main className="">
-      <Nav />
+      {/* <Nav /> */}
       <Hero />
       <Experience />
     </main>

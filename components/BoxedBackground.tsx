@@ -23,12 +23,13 @@ const BoxedBackground = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen absolute grid grid-cols-4 grid-rows-7 md:grid-cols-6 md:grid-rows-6 lg:grid-cols-8 lg:grid-rows-8 xl:grid-cols-12 xl:grid-rows-12">
+    <div className="w-full h-full absolute grid grid-cols-4 grid-rows-7 md:grid-cols-6 md:grid-rows-6 lg:grid-cols-8 lg:grid-rows-8 xl:grid-cols-12 xl:grid-rows-12">
       {new Array(screenSize === "xl" ? 72 : screenSize === "lg" ? 64 : 36)
         .fill(null)
         .map((item, idx) => (
           <Box key={idx} />
         ))}
+      <div className="absolute bottom-0 left-0 right-0 z-20 h-24 bg-gradient-to-t from-[#1a1a1a] to-transparent" />
     </div>
   );
 };

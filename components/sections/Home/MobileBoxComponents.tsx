@@ -10,9 +10,11 @@ import { ArrowRight } from "lucide-react";
 export const MobileRole = () => (
   <div className="">
     <h1 className="text-white/80 font-semibold text-md">Hi, I am Rakibul.</h1>
-    <h1 className="text-white/40 font-semibold text-sm">I'm a CS Student</h1>
     <h1 className="text-white/40 font-semibold text-sm">
-      & Software Engineer.
+      I'm a Computer Science student,
+    </h1>
+    <h1 className="text-white/40 font-semibold text-sm">
+      Based in London, UK.
     </h1>
     <button className="flex gap-2 items-center text-xs mt-2 text-primary font-bold">
       Contact me <ArrowRight size={16} />

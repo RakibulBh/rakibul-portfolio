@@ -47,14 +47,14 @@ const mobileContainerStyles = [
 ];
 
 const parentContainerStyles =
-  "w-full h-[40rem] md:w-[50rem] md:h-[50rem] lg:w-[55rem] md:h-[55rem] xl:w-[60rem] md:h-[60rem]";
+  "w-full h-[40rem] md:w-[40rem] md:h-[40rem] xl:w-[40rem] xl:h-[40rem] 2xl:w-[60rem] 2xl:h-[60rem]";
 
 const ContainerLayout = () => {
   return (
     <>
       <div
         className={cn(
-          "hidden md:grid grid-cols-5 grid-rows-7 gap-2 lg:gap-3 text-white z-10",
+          "hidden md:grid grid-cols-5 grid-rows-7 gap-2 2xl:gap-3 text-white z-10",
           parentContainerStyles
         )}
       >

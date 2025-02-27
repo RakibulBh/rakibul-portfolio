@@ -1,34 +1,25 @@
 import GitHistory from "@/components/GitHistory";
 import { TECHNOLOGIES } from "@/contstants/techstack";
-import { Book, Gem, LaptopMinimal } from "lucide-react";
+import { ArrowRight, Book, Gem, LaptopMinimal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Present = () => (
-  <>
-    <h1 className="text-md md:text-lg lg:text-xl font-bold mb-1">Present</h1>
-    <div className="flex items-center gap-2">
-      <Gem color="#41b883" size={16} />
-      <p className="text-xs sm:text-sm md:text-md">Learning Golang</p>
+  <div className="h-full font-bold flex flex-col justify-between text-sm md:text-md 2xl:text-xl">
+    <div className="w-full flex flex-row items-center justify-between">
+      <h1 className="text-white/70">Hi, I'm Rakibul,</h1>
+      <button className="flex gap-2 items-center text-xs text-primary font-bold 2xl:text-lg">
+        Contact me <ArrowRight size={16} />
+      </button>
     </div>
-    <div className="flex items-center gap-2">
-      <Book color="#41b883" size={16} />
-      <p className="text-xs sm:text-sm md:text-md">
-        Reading Desinging Data Intensive Applications
-      </p>
-    </div>
-    <div className="flex items-center gap-2">
-      <LaptopMinimal color="#41b883" size={16} />
-      <p className="text-xs sm:text-sm md:text-md">
-        Working on: Langchain AI Agent
-      </p>
-    </div>
-  </>
+    <h1 className="text-white/40">I'm a Computer Science student,</h1>
+    <h1 className="text-white/40">Based in London, UK.</h1>
+  </div>
 );
 
 export const Github = () => (
   <Link href="https://github.com/rakibulbh">
-    <Image src="/brands/github.png" alt="github-logo" width={80} height={80} />
+    <Image src="/brands/github.png" alt="github-logo" width={40} height={40} />
   </Link>
 );
 
@@ -38,8 +29,8 @@ export const Linkedin = () => (
       className=""
       src="/brands/linkedin.png"
       alt="linkedij-logo"
-      width={80}
-      height={80}
+      width={40}
+      height={40}
     />
   </Link>
 );
@@ -58,10 +49,9 @@ export const PlantImage = () => (
 
 export const Role = () => (
   <>
-    <h1 className="text-md sm:text-xl md:text-2xl font-bold">
-      2nd Year Student & Software Engineer
+    <h1 className="text-md sm:text-xl md:text-2xl font-bold text-center">
+      Love solving problems
     </h1>
-    <p className="text-gray-200">(based in London, UK)</p>
   </>
 );
 
@@ -70,15 +60,15 @@ export const Profile = () => (
     <Link href="http://github.com/rakibulbh">
       <div className=" bg-primary rounded-full p-1">
         <Image
-          width={150}
-          height={150}
+          width={80}
+          height={80}
           src="/profile-picture.jpg"
           alt="profile-picture"
-          className="rounded-full"
+          className="rounded-full 2xl:w-32 2xl:h-32"
         />
       </div>
     </Link>
-    <h1 className="text-primary font-bold text-xl sm:text-2xl md:text-3xl">
+    <h1 className="text-primary font-bold text-sm sm:text-lg md:text-xl 2xl:text-3xl">
       Rakibul Bhuiyan
     </h1>
   </div>
@@ -97,12 +87,8 @@ export const Technologies = () => {
       <div className="absolute top-0 left-0 right-0 z-10 h-16 bg-gradient-to-b from-[#1a1a1a] to-transparent"></div>
       <div className="absolute bottom-0 left-0 right-0 z-10 h-16 bg-gradient-to-t from-[#1a1a1a] to-transparent"></div>
 
-      <h1 className="absolute md:text-md lg:text-xl font-bold top-10 left-3 p-1 bg-primary z-20 rounded-lg">
-        My technologies
-      </h1>
-
       <div className="scroll-container hover:pause-animation justify-center">
-        <div className="grid grid-cols-4 md:gap-x-6 lg:gap-x-12 gap-y-4 overflow-y-hidden">
+        <div className="grid grid-cols-4 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 2xl:gap-x-12 gap-y-4 overflow-y-hidden">
           {infiniteTechnologies.map((technology, idx) => (
             <Image
               key={`${technology}-${idx}`}

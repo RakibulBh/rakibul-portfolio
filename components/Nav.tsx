@@ -8,8 +8,8 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <div className="absolute w-full flex justify-center mt-6">
-      <div className="p-1 rounded-lg bg-card flex gap-4">
+    <div className="w-full h-12 flex justify-center items-center">
+      <div className="absolute p-1 rounded-lg bg-card flex gap-4">
         {navlinks.map((navlink) => (
           <NavButton
             key={navlink.name}
