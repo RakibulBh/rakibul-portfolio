@@ -4,8 +4,8 @@ import GitHistory from "@/components/sections/Home/GitHistory";
 import { Blogs } from "./BoxComponents";
 import Link from "next/link";
 import Image from "next/image";
-import { TECHNOLOGIES } from "@/contstants/techstack";
 import { ArrowRight } from "lucide-react";
+import { TECHNOLOGIES } from "@/data/techstack";
 
 export const MobileRole = () => (
   <div className="">

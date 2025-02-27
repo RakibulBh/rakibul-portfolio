@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 const Projects = () => {
   const PROJECTS = Array(12).fill(null);
@@ -43,8 +44,8 @@ const Projects = () => {
 
           {/* Navigation Arrows */}
           <div className="hidden lg:block">
-            <CarouselPrevious className="-left-4 md:-left-6 h-8 w-8 md:h-10 md:w-10 border-white/20 hover:border-white/40" />
-            <CarouselNext className="-right-4 md:-right-6 h-8 w-8 md:h-10 md:w-10 border-white/20 hover:border-white/40" />
+            <CarouselPrevious className="-left-4 md:-left-16 2xl:-left-16 h-8 w-8 md:h-10 md:w-10 border-white/20 hover:border-primary text-primary hover:bg-transparent" />
+            <CarouselNext className="-right-4 md:-right-16 2xl:-right-16 h-8 w-8 md:h-10 md:w-10 border-white/20 hover:border-primary text-primary hover:bg-transparent" />
           </div>
         </Carousel>
       </div>
@@ -56,19 +57,48 @@ const ProjectComponent = () => {
   return (
     <div className="bg-card flex flex-col rounded-lg border border-white/20 hover:border-white/30 transition-all h-full">
       {/* Video placeholder */}
-      <div className="aspect-video w-full rounded-t-lg bg-gradient-to-br from-white/10 to-white/5" />
+      <div className="aspect-video w-full rounded-t-lg bg-gradient-to-br from-white/10 to-white/5 relative">
+        <Image
+          src={"/projects/mockproject.png"}
+          layout="fill"
+          objectFit="contain"
+          alt="project-pic"
+        />
+        <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#2d2d2d] to-transparent pointer-events-none"></div>
+        ;
+      </div>
 
       {/* Info */}
-      <div className="flex-1 p-3 sm:p-4 flex flex-col gap-2">
-        <h1 className="text-white font-semibold text-sm sm:text-base truncate">
+      <div className="flex-1 p-3 flex flex-col gap-1">
+        <h1 className="text-white font-bold text-sm truncate">
           System Prompt Generator
         </h1>
-        <p className="text-white/40 text-xs sm:text-sm line-clamp-3">
-          A modern web application that helps users create effective AI system
-          prompts with intelligent assistance, featuring real-time generation
-          and preview capabilities.
+        <div className="flex gap-1 items-center">
+          <TechIcon icon="next" name="Next.js" />
+          <TechIcon icon="go" name="Golang" />
+        </div>
+        <p className="text-white/40 text-xs sm:text-sm line-clamp-3 truncate">
+          A modern web application
         </p>
       </div>
+    </div>
+  );
+};
+
+const TechIcon = ({ icon, name }: { icon: string; name: string }) => {
+  return (
+    <div className="inline-flex items-center gap-1.5 rounded-lg border border-white/20 bg-white/5 px-2 py-1.5 transition-all hover:border-white/30 hover:bg-white/10 group">
+      <Image
+        width={16}
+        height={16}
+        alt={`${name} technology logo`}
+        src={`/svgs/${icon}.svg`}
+        className="w-3.5 h-3.5 object-contain brightness-125 transition-transform group-hover:scale-110"
+        loading="lazy"
+      />
+      <p className="text-white/90 text-[0.6rem] sm:text-xs font-medium leading-tight truncate max-w-[8rem]">
+        {name}
+      </p>
     </div>
   );
 };

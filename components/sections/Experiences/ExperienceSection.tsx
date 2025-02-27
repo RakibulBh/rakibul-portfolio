@@ -1,9 +1,9 @@
 "use client";
-import { WORK_EXPERIENCES } from "@/contstants/Experiences";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import ExperienceComponent from "./ExperienceComponent";
+import { WORK_EXPERIENCES } from "@/data/Experiences";
 
 const Experiences = () => {
   const [section, setSection] = useState<"work" | "education">("work");
@@ -56,7 +56,7 @@ const Experiences = () => {
           ))}
 
           {/* Scroll Fade-out Effect */}
-          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card to-transparent pointer-events-none" />
+          {/* <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card to-transparent pointer-events-none" /> */}
         </div>
       </div>
     </section>

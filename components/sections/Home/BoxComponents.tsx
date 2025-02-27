@@ -1,5 +1,5 @@
 import GitHistory from "@/components/sections/Home/GitHistory";
-import { TECHNOLOGIES } from "@/contstants/techstack";
+import { TECHNOLOGIES } from "@/data/techstack";
 import { ArrowRight, Book, Gem, LaptopMinimal } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
