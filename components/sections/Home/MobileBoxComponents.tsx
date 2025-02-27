@@ -1,6 +1,6 @@
 "use client";
 
-import GitHistory from "@/components/GitHistory";
+import GitHistory from "@/components/sections/Home/GitHistory";
 import { Blogs } from "./BoxComponents";
 import Link from "next/link";
 import Image from "next/image";

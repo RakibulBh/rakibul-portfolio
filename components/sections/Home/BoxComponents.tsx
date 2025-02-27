@@ -1,4 +1,4 @@
-import GitHistory from "@/components/GitHistory";
+import GitHistory from "@/components/sections/Home/GitHistory";
 import { TECHNOLOGIES } from "@/contstants/techstack";
 import { ArrowRight, Book, Gem, LaptopMinimal } from "lucide-react";
 import Image from "next/image";

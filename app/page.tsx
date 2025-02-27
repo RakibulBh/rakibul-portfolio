@@ -1,13 +1,15 @@
 import Nav from "@/components/Nav";
-import Experience from "@/components/sections/Experiences";
+import Experiences from "@/components/sections/Experiences/ExperienceSection";
 import Hero from "@/components/sections/Home/Hero";
+import Projects from "@/components/sections/Projects/ProjectsSection";
 
 export default function Home() {
   return (
     <main className="">
       {/* <Nav /> */}
       <Hero />
-      <Experience />
+      <Experiences />
+      <Projects />
     </main>
   );
 }

@@ -7,8 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import GitHistory from "./GitHistory";
-import { Layout } from "./sections/Home/BoxComponents";
-import { MobileLayout } from "./sections/Home/MobileBoxComponents";
+import { Layout } from "./BoxComponents";
+import { MobileLayout } from "./MobileBoxComponents";
 
 const containerStyles = [
   // present

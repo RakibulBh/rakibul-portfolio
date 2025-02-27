@@ -1,6 +1,6 @@
 import React from "react";
-import ContainerLayout from "../../ContainerLayout";
-import BoxedBackground from "../../BoxedBackground";
+import ContainerLayout from "./ContainerLayout";
+import BoxedBackground from "./BoxedBackground";
 
 const Hero = () => {
   return (
