@@ -85,14 +85,27 @@ export const Profile = () => (
 );
 
 export const Technologies = () => {
+  const infiniteTechnologies = [
+    ...TECHNOLOGIES,
+    ...TECHNOLOGIES,
+    ...TECHNOLOGIES,
+  ];
+
   return (
-    <>
-      <h1 className="text-lg font-bold">My technologies</h1>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-4 gap-x-6 gap-y-4">
-          {TECHNOLOGIES.map((technology) => (
+    <div className="relative w-full overflow-hidden h-full">
+      {/* Gradient overlays for fade effect */}
+      <div className="absolute top-0 left-0 right-0 z-10 h-16 bg-gradient-to-b from-[#1a1a1a] to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 z-10 h-16 bg-gradient-to-t from-[#1a1a1a] to-transparent"></div>
+
+      <h1 className="absolute md:text-md lg:text-xl font-bold top-10 left-3 p-1 bg-primary z-20 rounded-lg">
+        My technologies
+      </h1>
+
+      <div className="scroll-container hover:pause-animation justify-center">
+        <div className="grid grid-cols-4 md:gap-x-6 lg:gap-x-12 gap-y-4 overflow-y-hidden">
+          {infiniteTechnologies.map((technology, idx) => (
             <Image
-              key={technology}
+              key={`${technology}-${idx}`}
               width={40}
               height={40}
               alt={`${technology}-icon`}
@@ -102,12 +115,35 @@ export const Technologies = () => {
           ))}
         </div>
       </div>
-    </>
+
+      {/* CSS for animation */}
+      <style jsx>{`
+        .scroll-container {
+          animation: scrollVertical 60s linear infinite;
+          width: 100%;
+        }
+
+        .hover\:pause-animation:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes scrollVertical {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(calc(-${TECHNOLOGIES.length * 12}px));
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
 export const Blogs = () => {
-  return <h1 className="text-xl sm:text-2xl md:text-3xl">Recent Blogs</h1>;
+  return (
+    <h1 className="text-md md:text-lg lg:text-xl font-bold">Recent Blogs</h1>
+  );
 };
 
 export const Layout = [

@@ -24,7 +24,7 @@ const containerStyles = [
   // profile picture
   "bg-card row-span-2 col-span-2 flex items-center justify-center",
   // Technologies
-  "bg-card row-span-5 col-span-2 p-3",
+  "bg-card row-span-5 col-span-2",
   // Git history
   "bg-card row-span-1 col-span-3 flex items-center",
   // Blogs
