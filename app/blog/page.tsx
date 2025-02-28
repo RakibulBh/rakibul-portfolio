@@ -3,19 +3,17 @@
 import {
   BlogContent,
   BlogHeader,
-  BlogPost,
   BlogSection,
   ContentType,
   posts,
 } from "@/data/Posts/posts";
 import { BlockMath } from "react-katex";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import { CodeBlock, MermaidChart } from "@/components/blog/RenderContent";
 import { House } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
-import { useRouter } from "next/router";
 
 const Page = () => {
   const post = posts[0];

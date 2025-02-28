@@ -1,6 +1,5 @@
 "use client";
 
-import GitHistory from "@/components/sections/Home/GitHistory";
 import { Blogs } from "./BoxComponents";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,7 +10,7 @@ export const MobileRole = () => (
   <div className="">
     <h1 className="text-white/80 font-semibold text-md">Hi, I am Rakibul.</h1>
     <h1 className="text-white/40 font-semibold text-sm">
-      I'm a Computer Science student,
+      I&apos;m a Computer Science student,
     </h1>
     <h1 className="text-white/40 font-semibold text-sm">
       Based in London, UK.

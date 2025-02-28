@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Inter } from "next/font/google";
@@ -28,7 +27,7 @@ export default function RootLayout({
         {children}
         <script type="module">
           import mermaid from
-          'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+          &apos;https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs&apos;;
         </script>
       </body>
     </html>

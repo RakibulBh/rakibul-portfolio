@@ -1,11 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { Book, Gem, LaptopMinimal } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import GitHistory from "./GitHistory";
+import React, { Ref } from "react";
 import { Layout } from "./BoxComponents";
 import { MobileLayout } from "./MobileBoxComponents";
 
@@ -87,16 +83,12 @@ const MobileGrid = () => (
 const Container = ({
   styles,
   children,
-  ref,
 }: {
   styles: string;
   children: React.ReactNode;
-  ref?: any;
 }) => {
   return (
-    <div ref={ref} className={cn(styles, "rounded-md md:rounded-lg")}>
-      {children}
-    </div>
+    <div className={cn(styles, "rounded-md md:rounded-lg")}>{children}</div>
   );
 };
 

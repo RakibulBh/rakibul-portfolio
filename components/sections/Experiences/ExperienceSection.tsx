@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import ExperienceComponent from "./ExperienceComponent";
 import { WORK_EXPERIENCES } from "@/data/Experiences";
