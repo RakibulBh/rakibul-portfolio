@@ -8,10 +8,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { PROJECTS, ProjectType } from "@/data/Projects";
 
 const Projects = () => {
-  const PROJECTS = Array(12).fill(null);
-
   return (
     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-20 2xl:px-20 py-8 md:py-12 xl:px-56 space-y-4">
       {/* Header */}
@@ -34,9 +33,14 @@ const Projects = () => {
                 className="pl-2 md:pl-4 basis-full lg:basis-11/12 xl:basis-full"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                  {PROJECTS.slice(index * 6, (index + 1) * 6).map((_, i) => (
-                    <ProjectComponent key={`${index}-${i}`} />
-                  ))}
+                  {PROJECTS.slice(index * 6, (index + 1) * 6).map(
+                    (project, i) => (
+                      <ProjectComponent
+                        project={project}
+                        key={`${index}-${i}`}
+                      />
+                    )
+                  )}
                 </div>
               </CarouselItem>
             ))}
@@ -53,32 +57,49 @@ const Projects = () => {
   );
 };
 
-const ProjectComponent = () => {
+const ProjectComponent = ({
+  project: { description, technologies, title, img },
+}: {
+  project: ProjectType;
+}) => {
   return (
     <div className="bg-card flex flex-col rounded-lg border border-white/20 hover:border-white/30 transition-all h-full">
       {/* Video placeholder */}
       <div className="aspect-video rounded-t-lg relative">
-        <Image
-          src={"/projects/mockproject.png"}
-          layout="fill"
-          objectFit="contain"
-          alt="project-pic"
-        />
+        {img ? (
+          <Image
+            src={`/projects/${img}`}
+            layout="fill"
+            objectFit="contain"
+            alt={`${title}-project-pic`}
+          />
+        ) : (
+          // Placeholder image
+          <Image
+            src={"/projects/mockproject.png"}
+            layout="fill"
+            objectFit="contain"
+            alt="project-pic"
+          />
+        )}
         <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-[#2d2d2d] to-transparent pointer-events-none"></div>
         ;
       </div>
 
       {/* Info */}
       <div className="flex-1 p-3 flex flex-col gap-1">
-        <h1 className="text-white font-bold text-sm truncate">
-          System Prompt Generator
-        </h1>
+        <h1 className="text-white font-bold text-sm truncate">{title}</h1>
         <div className="flex gap-1 items-center">
-          <TechIcon icon="next" name="Next.js" />
-          <TechIcon icon="go" name="Golang" />
+          {technologies.map((technology) => (
+            <TechIcon
+              key={technology.name}
+              icon={technology.img}
+              name={technology.name}
+            />
+          ))}
         </div>
         <p className="text-white/40 text-xs line-clamp-3 truncate">
-          A modern web application
+          {description}
         </p>
       </div>
     </div>
