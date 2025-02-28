@@ -26,6 +26,10 @@ export default function RootLayout({
         className={`antialiased ${inter.variable} bg-background min-h-screen`}
       >
         {children}
+        <script type="module">
+          import mermaid from
+          'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        </script>
       </body>
     </html>
   );

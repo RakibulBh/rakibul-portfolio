@@ -1,6 +1,5 @@
 "use client";
 
-import { TECHNOLOGIES } from "@/contstants/techstack";
 import { cn } from "@/utils/cn";
 import { Book, Gem, LaptopMinimal } from "lucide-react";
 import Image from "next/image";

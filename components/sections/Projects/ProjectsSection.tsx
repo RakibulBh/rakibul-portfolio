@@ -57,7 +57,7 @@ const ProjectComponent = () => {
   return (
     <div className="bg-card flex flex-col rounded-lg border border-white/20 hover:border-white/30 transition-all h-full">
       {/* Video placeholder */}
-      <div className="aspect-video w-full rounded-t-lg bg-gradient-to-br from-white/10 to-white/5 relative">
+      <div className="aspect-video rounded-t-lg relative">
         <Image
           src={"/projects/mockproject.png"}
           layout="fill"
@@ -77,7 +77,7 @@ const ProjectComponent = () => {
           <TechIcon icon="next" name="Next.js" />
           <TechIcon icon="go" name="Golang" />
         </div>
-        <p className="text-white/40 text-xs sm:text-sm line-clamp-3 truncate">
+        <p className="text-white/40 text-xs line-clamp-3 truncate">
           A modern web application
         </p>
       </div>
@@ -93,7 +93,7 @@ const TechIcon = ({ icon, name }: { icon: string; name: string }) => {
         height={16}
         alt={`${name} technology logo`}
         src={`/svgs/${icon}.svg`}
-        className="w-3.5 h-3.5 object-contain brightness-125 transition-transform group-hover:scale-110"
+        className="w-3.5 h-3.5 object-contain brightness-125"
         loading="lazy"
       />
       <p className="text-white/90 text-[0.6rem] sm:text-xs font-medium leading-tight truncate max-w-[8rem]">
