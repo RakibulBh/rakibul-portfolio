@@ -64,7 +64,7 @@ export const Profile = () => (
           height={80}
           src="/profile-picture.jpg"
           alt="profile-picture"
-          className="rounded-full 2xl:w-32 2xl:h-32"
+          className="rounded-full 2xl:w-32 2xl:h-32 object-cover"
         />
       </div>
     </Link>
