@@ -17,7 +17,8 @@ import Link from "next/link";
 import { cn } from "@/utils/cn";
 import { useRouter } from "next/router";
 
-const Page = ({ post = posts[0] }: { post: BlogPost }) => {
+const Page = () => {
+  const post = posts[0];
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Sidebar - Collapsible on mobile */}
@@ -131,7 +132,7 @@ const BlogSectionComponent = ({ section }: { section: BlogSection }) => {
       case "math":
         return (
           <div className="my-6 overflow-x-auto" key={idx}>
-            <BlockMath math={content.content} />
+            <BlockMath math={content.content ? content.content : ""} />
           </div>
         );
       default:

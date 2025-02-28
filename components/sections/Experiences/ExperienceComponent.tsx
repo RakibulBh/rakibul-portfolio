@@ -1,4 +1,4 @@
-import { Experience } from "@/contstants/Experiences";
+import { Experience } from "@/data/Experiences";
 import Image from "next/image";
 
 const ExperienceComponent = ({ experience }: { experience: Experience }) => {

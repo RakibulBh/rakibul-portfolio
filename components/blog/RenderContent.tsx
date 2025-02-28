@@ -11,7 +11,7 @@ export const CodeBlock = ({
   language: string | undefined;
 }) => (
   <SyntaxHighlighter language={language} style={duotoneSea}>
-    {code}
+    {code ? code : `console.log("an error has occurred rendering this code.`}
   </SyntaxHighlighter>
 );
 
