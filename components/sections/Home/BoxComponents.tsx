@@ -7,12 +7,12 @@ import Link from "next/link";
 export const Present = () => (
   <div className="h-full font-bold flex flex-col justify-between text-sm md:text-md 2xl:text-xl">
     <div className="w-full flex flex-row items-center justify-between">
-      <h1 className="text-white/70">Hi, I'm Rakibul,</h1>
+      <h1 className="text-white/70">Hi, I&apos;m Rakibul,</h1>
       <button className="flex gap-2 items-center text-xs text-primary font-bold 2xl:text-lg">
         Contact me <ArrowRight size={16} />
       </button>
     </div>
-    <h1 className="text-white/40">I'm a Computer Science student,</h1>
+    <h1 className="text-white/40">I&apos;m a Computer Science student,</h1>
     <h1 className="text-white/40">Based in London, UK.</h1>
   </div>
 );

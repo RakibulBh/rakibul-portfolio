@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import React, { Ref } from "react";
+import React from "react";
 import { Layout } from "./BoxComponents";
 import { MobileLayout } from "./MobileBoxComponents";
 
