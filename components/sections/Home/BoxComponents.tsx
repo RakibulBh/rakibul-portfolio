@@ -16,7 +16,7 @@ export const Present = () => (
     <div className="relative">
       <div className="w-full flex flex-row items-center justify-between">
         <h1 className="text-white/80 text-sm md:text-base">
-          Hello, I'm Rakibul
+          Hello, I&apos;m Rakibul
         </h1>
         <motion.button
           whileHover={{ scale: 1.05 }}
