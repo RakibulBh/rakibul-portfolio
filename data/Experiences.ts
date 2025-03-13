@@ -65,7 +65,8 @@ export const EDUCATION_EXPERIENCES: Education[] = [
   {
     date: "2023 - 2027",
     school: "Brunel University London",
-    degree: "BSc Computer Science",
+    degree: "Bachelor of Science",
+    fieldOfStudy: "Computer Science",
     grades: "Predicted First Class (1st)",
     coursework: [
       "Raspberry Pi Java Programming (A*)",

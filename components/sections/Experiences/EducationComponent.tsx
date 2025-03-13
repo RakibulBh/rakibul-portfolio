@@ -31,6 +31,9 @@ const EducationComponent = ({ education }: { education: Education }) => {
           </h3>
           <div className="text-sm sm:text-base text-gray-200 space-y-1">
             <p className="font-semibold">{education.degree}</p>
+            {education.fieldOfStudy && (
+              <p className="text-gray-400">{education.fieldOfStudy}</p>
+            )}
           </div>
         </div>
 
