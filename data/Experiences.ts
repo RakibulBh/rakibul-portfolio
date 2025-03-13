@@ -6,6 +6,18 @@ export type Experience = {
   bullets: string[];
 };
 
+// Valid parameters to show for education
+export type Education = {
+  date: string;
+  school: string;
+  degree: string;
+  fieldOfStudy?: string;
+  grades?: string;
+  honors?: string[];
+  coursework?: string[];
+  image: string;
+};
+
 export const WORK_EXPERIENCES: Experience[] = [
   {
     role: "Placement Software Engineer",
@@ -46,5 +58,37 @@ export const WORK_EXPERIENCES: Experience[] = [
       "Collaborated with IT professionals to set up environments for new upcoming employees.",
       "Attended daily team meetings with members from every department understanding how a large team works together to develop strategies and plans for success in upcoming races.",
     ],
+  },
+];
+
+export const EDUCATION_EXPERIENCES: Education[] = [
+  {
+    date: "2023 - 2027",
+    school: "Brunel University London",
+    degree: "BSc Computer Science",
+    grades: "Predicted First Class (1st)",
+    coursework: [
+      "Raspberry Pi Java Programming (A*)",
+      "Software Development Group Project",
+      "Networks assignment (A)",
+    ],
+    image: "brunel.jpg",
+  },
+  {
+    date: "2021 - 2023",
+    school: "Mulberry Academy Shoreditch",
+    degree: "A-Levels",
+    fieldOfStudy: "Computer Science, Mathematics, Physics",
+    coursework: ["PyGame python game (A*)", "EPQ (A)"],
+    grades: "A B D",
+    honors: ["STEM Academy", "Excellence Award for Programming"],
+    image: "mulberry.png",
+  },
+  {
+    date: "2016 - 2021",
+    school: "Bow School",
+    degree: "GCSEs",
+    grades: "11 GCSEs Grade 9-6 (A*-B)",
+    image: "bow.jpeg",
   },
 ];
