@@ -1,20 +1,37 @@
 import GitHistory from "@/components/sections/Home/GitHistory";
 import { TECHNOLOGIES } from "@/data/techstack";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { posts } from "@/data/Posts/posts";
 
 export const Present = () => (
-  <div className="h-full font-bold flex flex-col justify-between text-sm md:text-md 2xl:text-xl">
-    <div className="w-full flex flex-row items-center justify-between">
-      <h1 className="text-white/70">Hi, I&apos;m Rakibul,</h1>
-      <button className="flex gap-2 items-center text-xs text-primary font-bold 2xl:text-lg">
-        Contact me <ArrowRight size={16} />
-      </button>
+  <motion.div
+    className="h-full font-bold flex flex-col justify-between p-4 relative overflow-hidden"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+  >
+    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-card/50 opacity-30" />
+    <div className="relative">
+      <div className="w-full flex flex-row items-center justify-between">
+        <h1 className="text-white/80 text-sm md:text-base">
+          Hello, I'm Rakibul
+        </h1>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex gap-2 items-center text-xs text-primary font-bold md:text-sm"
+        >
+          Contact <ArrowRight size={16} />
+        </motion.button>
+      </div>
     </div>
-    <h1 className="text-white/40">I&apos;m a Computer Science student,</h1>
-    <h1 className="text-white/40">Based in London, UK.</h1>
-  </div>
+    <div className="relative space-y-1">
+      <h1 className="text-white/60 text-sm md:text-base">Computer Science</h1>
+      <h1 className="text-white/60 text-sm md:text-base">London, UK</h1>
+    </div>
+  </motion.div>
 );
 
 export const Github = () => (
@@ -47,28 +64,37 @@ export const PlantImage = () => (
   </div>
 );
 
-export const Role = () => (
-  <>
-    <h1 className="text-md sm:text-xl md:text-2xl font-bold text-center">
-      Love solving problems
-    </h1>
-  </>
+export const ResumeDownload = () => (
+  <motion.div
+    className="h-full flex items-center justify-center"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+  >
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-primary/90 hover:bg-primary text-white px-6 py-3 rounded-full flex items-center gap-2"
+    >
+      <span className="text-sm md:text-base">Download CV</span>
+      <ArrowRight size={18} />
+    </motion.button>
+  </motion.div>
 );
 
 export const Profile = () => (
-  <div className="flex items-center flex-col gap-3">
+  <div className="flex items-center flex-col gap-2 md:gap-3">
     <Link href="http://github.com/rakibulbh">
-      <div className=" bg-primary rounded-full p-1">
+      <div className="bg-primary rounded-full p-1 md:p-1.5 lg:p-2">
         <Image
           width={80}
           height={80}
           src="/profile-picture.jpg"
           alt="profile-picture"
-          className="rounded-full 2xl:w-32 2xl:h-32 object-cover"
+          className="rounded-full w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32 object-cover"
         />
       </div>
     </Link>
-    <h1 className="text-primary font-bold text-sm sm:text-lg md:text-xl 2xl:text-3xl">
+    <h1 className="text-primary font-bold text-sm sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl leading-tight md:leading-normal">
       Rakibul Bhuiyan
     </h1>
   </div>
@@ -127,8 +153,39 @@ export const Technologies = () => {
 };
 
 export const Blogs = () => {
+  const recentPost = posts[0]; // Show only latest post
+
   return (
-    <h1 className="text-md md:text-lg lg:text-xl font-bold">Recent Blogs</h1>
+    <div className="h-full flex flex-col p-3 space-y-2 overflow-hidden">
+      <div className="flex justify-between items-center">
+        <h2 className="text-sm font-semibold text-primary/80">
+          Latest Article
+        </h2>
+        <ArrowRight size={16} className="text-primary/60" />
+      </div>
+      <motion.div
+        className="flex-1 bg-white/5 rounded-lg p-3 flex flex-col justify-between"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
+        <div>
+          <h3 className="text-white/90 font-medium text-sm line-clamp-2">
+            {recentPost.header.title}
+          </h3>
+          <p className="text-white/60 text-xs mt-1 line-clamp-3">
+            {
+              recentPost.sections.find((s) => s.header === "Overview")
+                ?.content[0].content
+            }
+          </p>
+        </div>
+        <div className="flex items-center justify-end mt-2">
+          <span className="text-xs text-primary/80">
+            {recentPost.header.posted}
+          </span>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
@@ -137,7 +194,7 @@ export const Layout = [
   Github,
   Linkedin,
   PlantImage,
-  Role,
+  ResumeDownload,
   Profile,
   Technologies,
   GitHistory,
